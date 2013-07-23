@@ -1204,6 +1204,10 @@ INSERT INTO `world_vehicle` VALUES ('2032', '307', '1', '[273,[9327.06,8607.06,0
 INSERT INTO `world_vehicle` VALUES ('2033', '307', '1', '[317,[2887.48,9702.04,0.001]]', null, '0.300', null);
 INSERT INTO `world_vehicle` VALUES ('2034', '308', '1', '[244,[5266.53,6516.37,0.001]]', null, '0.300', null);
 INSERT INTO `world_vehicle` VALUES ('2035', '308', '1', '[293,[12283.6,5576.42,0.001]]', null, '0.300', null);
+INSERT INTO `world_vehicle` VALUES ('2036', '309', '1', '[54,[6930.72,2340.85,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2037', '309', '1', '[200,[13113.1,10437.3,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2038', '309', '1', '[171,[2524.9,5065.23,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2039', '309', '1', '[193,[9703.03,8928.37,0.001]]', null, '0.600', null);
 
 -- ----------------------------
 -- View structure for `v_deployable`
