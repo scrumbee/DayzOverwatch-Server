@@ -10529,13 +10529,6 @@ sleep 0.01; if (true) then
   _this setPos [8466.5313, 6605.9634, 10.737409];
 };
 
-_vehicle_2304 = objNull;
-sleep 0.01; if (true) then
-{
-  _this = createVehicle ["JDG_carrier_Spawner", [7811.1133, 2247.3826, 0.19102922], [], 0, "CAN_COLLIDE"];
-  _vehicle_2304 = _this;
-  _this setPos [7811.1133, 2247.3826, 0.19102922];
-
 _vehicle_2305 = objNull;
 sleep 0.01; if (true) then
 {
