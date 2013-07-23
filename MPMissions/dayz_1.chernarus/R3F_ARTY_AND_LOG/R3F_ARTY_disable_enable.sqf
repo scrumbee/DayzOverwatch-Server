@@ -1,1 +1,0 @@
-//#define R3F_ARTY_enable

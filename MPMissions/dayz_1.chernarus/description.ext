@@ -1,4 +1,3 @@
-#include "R3F_ARTY_AND_LOG\desc_include.h"
 respawn = "BASE";
 respawndelay = 5;
 onLoadMission= "DayZ Chernarus";

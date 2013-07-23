@@ -29,7 +29,6 @@ progressLoadingScreen 1.0;
 "filmic" setToneMappingParams [0.153, 0.357, 0.231, 0.1573, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
 
 [] execVM "\ddopp_taserpack\scripts\init_Taser.sqf";
-[] execVM "R3F_ARTY_AND_LOG\init.sqf";
 
 /* BIS_Effects_* fixes from Dwarden */
 BIS_Effects_EH_Killed = compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\killed.sqf";
