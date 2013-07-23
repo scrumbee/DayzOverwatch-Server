@@ -1,0 +1,1 @@
+perl db_spawn_vehicles.pl --instance 1 --host localhost --user dbusername --pass password --name dayz_overwatch --port 3306

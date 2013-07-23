@@ -1,0 +1,2 @@
+perl db_utility.pl --instance 1 --host localhost --user username --pass password --name dayz_overwatch --port 3306 --cleanup damaged
+perl db_utility.pl --instance 1 --host localhost --user username --pass password --name dayz_overwatch --port 3306 --cleanup bounds

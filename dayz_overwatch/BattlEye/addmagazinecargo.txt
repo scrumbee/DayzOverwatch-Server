@@ -1,0 +1,37 @@
+// Blacklist of illegal weapons (not present in DayZ mod):
+5=A10
+//5=BAF_AS50_scoped // temporary enabled during 1.7.6.1 -> 1.7.7
+5=BAF_AS50_TWS
+5=BAF_ied_v1
+5=BAF_ied_v2
+5=BAF_ied_v3
+5=BAF_ied_v4
+5=BAF_LRR_scoped
+5=BAF_LRR_scoped_W
+// 5=Bizon  // referenced in dayzmod code
+//5=G36a
+5=IR_Strobe_Marker
+5=IRStrobe
+//5=M107_DZ // temporary enabled during 1.7.6.1 -> 1.7.7
+//5=M4A1_Aim_camo
+//5=M4A1_HWS_GL   // referenced in dayzmod code
+5=PMC_AS50_scoped
+5=PMC_ied_v1_muzzle
+5=PMC_ied_v2_muzzle
+5=PMC_ied_v3_muzzle
+5=PMC_ied_v4_muzzle
+5=RPG7V
+5=PMC_AS50_TWS
+5=EvMoney
+5=PMC_AS50_TWS_Large
+//5=DMR // was in 1.7.6
+5=BAF_AS50_scoped_Large
+5=EvMap
+// Black list of illegal Ammo:
+5="Mine"
+5="MineE"
+5="HandGrenade_Stone"
+5="R_SMAW_HEAA"
+5="R_SMAW_HEDP"
+5="Chukar"
+5 "TWS"

@@ -1,0 +1,1 @@
+start .\Expansion\beta\arma2oaserver.exe -mod=@hive;@DayzOverwatch -name=dayz_overwatch -config=dayz_overwatch\config_1234.cfg -cfg=dayz_overwatch\basic.cfg -profiles=dayz_overwatch

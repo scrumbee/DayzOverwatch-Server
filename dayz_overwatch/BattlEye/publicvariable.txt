@@ -1,0 +1,15 @@
+1 !"usecBandage" !"DDOPP_pvAnim" !"DDOPP_pvSay" !"dayzHitV" !"dayzUpdateVehicle" !"dayzHumanity" !"usecBleed" !"dayzDeath" !"usecEpi" !"dayzLoginRecord" !"dayzLogin2" !"dayzPlayerSave" !"dayzLogin" !="remExField" !="remExFP" !="drn_AskServerDynamicWeatherEventArgs" !="BIS_effects_gepv" !"PVDZ_"
+
+////////////////////////// From server only: Broadcast PV without EH (no code executed on change)
+5="drn_var_DynamicWeather_rain"  
+5="drn_var_DynamicWeather_ServerInitialized"  
+
+////////////////////////// From server only: Broadcast PV with EH
+5="dayzInfectedCamps"
+5="dayzSetDate"
+5="drn_DynamicWeather_DebugTextEventArgs"
+5="drn_DynamicWeatherEventArgs"
+
+////////////////////////// Unicast PV Client<-
+5="dayzPlayerLogin2"
+5="dayzPlayerLogin"
