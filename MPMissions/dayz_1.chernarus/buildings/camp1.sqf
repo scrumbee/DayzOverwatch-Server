@@ -1,4 +1,4 @@
-//Main Building files
+//Custom Buildings for Dayz Overwatch
 if (isServer) then {
 
 _vehicle_151 = objNull;
