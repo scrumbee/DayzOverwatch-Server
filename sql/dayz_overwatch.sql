@@ -211,8 +211,6 @@ INSERT INTO `migration_schema_log` VALUES ('39', 'Reality', '2013-06-19 18:11:11
 INSERT INTO `migration_schema_log` VALUES ('40', 'Reality', '2013-06-19 18:11:11', '0.390000', '0.400000');
 INSERT INTO `migration_schema_log` VALUES ('41', 'Reality', '2013-06-19 18:11:11', '0.400000', '0.410000');
 INSERT INTO `migration_schema_log` VALUES ('42', 'Reality', '2013-06-19 18:11:11', '0.410000', '0.420000');
-INSERT INTO `migration_schema_log` VALUES ('43', 'RealityInvCust', '2013-06-21 07:15:11', '0.000000', '0.010000');
-INSERT INTO `migration_schema_log` VALUES ('44', 'RealityInvCust', '2013-06-21 07:15:11', '0.010000', '0.020000');
 
 -- ----------------------------
 -- Table structure for `migration_schema_version`
@@ -228,7 +226,6 @@ CREATE TABLE `migration_schema_version` (
 -- Records of migration_schema_version
 -- ----------------------------
 INSERT INTO `migration_schema_version` VALUES ('Reality', '0.420000');
-INSERT INTO `migration_schema_version` VALUES ('RealityInvCust', '0.020000');
 
 -- ----------------------------
 -- Table structure for `profile`
@@ -408,22 +405,22 @@ INSERT INTO `vehicle` VALUES ('101', 'JetSkiYanahui_Case_Blue', '0.100', '0.700'
 INSERT INTO `vehicle` VALUES ('102', 'JetSkiYanahui_Case_Red', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('103', 'JetSkiYanahui_Yellow', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('104', 'JetSkiYanahui_Green', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
-INSERT INTO `vehicle` VALUES ('105', 'JetSkiYanahui_Blue', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
-INSERT INTO `vehicle` VALUES ('106', 'JetSkiYanahui_Red', '0.100', '0.400', '0.200', '0.800', '0', '2', null, '[]');
-INSERT INTO `vehicle` VALUES ('107', 'JetSkiYanahui_White', '0.100', '0.400', '0.200', '0.800', '0', '2', null, '[]');
+INSERT INTO `vehicle` VALUES ('105', 'JetSkiYanahui_Blue', '0.100', '0.700', '0.200', '0.800', '2', '4', null, '[]');
+INSERT INTO `vehicle` VALUES ('106', 'JetSkiYanahui_Red', '0.100', '0.400', '0.200', '0.800', '2', '4', null, '[]');
+INSERT INTO `vehicle` VALUES ('107', 'JetSkiYanahui_White', '0.100', '0.400', '0.200', '0.800', '2', '4', null, '[]');
 INSERT INTO `vehicle` VALUES ('108', 'C185_DZ', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('109', 'C185F_DZ', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('110', 'C185E_DZ', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('300', 'UH1Y_DZ', '0.800', '0.900', '0.100', '0.200', '0', '1', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
 INSERT INTO `vehicle` VALUES ('301', 'HMMWV_M1151_M2_DES_EP1', '0.500', '0.700', '0.200', '0.600', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
 INSERT INTO `vehicle` VALUES ('302', 'BTR40_MG_TK_INS_EP1', '0.500', '0.700', '0.200', '0.600', '0', '2', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
-INSERT INTO `vehicle` VALUES ('303', 'ArmoredSUV_PMC', '0.600', '0.700', '0.200', '0.500', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
-INSERT INTO `vehicle` VALUES ('304', 'UH60M_DZ', '0.700', '0.800', '0.200', '0.300', '0', '0', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
+INSERT INTO `vehicle` VALUES ('303', 'SUV_Armored_DZ', '0.600', '0.700', '0.200', '0.500', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('304', 'usec_bell206_1', '0.700', '0.800', '0.200', '0.300', '0', '0', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
 INSERT INTO `vehicle` VALUES ('305', 'BAF_Merlin_DZ', '0.700', '0.900', '0.100', '0.200', '0', '1', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
-INSERT INTO `vehicle` VALUES ('306', 'CSJ_GyroC', '0.000', '0.000', '0.100', '0.800', '0', '1', null, '[]');
+INSERT INTO `vehicle` VALUES ('306', 'GyroC_DZ', '0.000', '0.000', '0.100', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('307', 'UAZ_MG_TK_EP1', '0.400', '0.700', '0.200', '0.800', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
 INSERT INTO `vehicle` VALUES ('308', 'Pickup_PK_GUE', '0.400', '0.700', '0.200', '0.800', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
-INSERT INTO `vehicle` VALUES ('309', 'usec_bell206_1', '0.500', '0.700', '0.200', '0.800', '0', '1', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
+INSERT INTO `vehicle` VALUES ('309', 'UH60M_DZ', '0.500', '0.700', '0.200', '0.800', '0', '1', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
 
 -- ----------------------------
 -- Table structure for `world`
