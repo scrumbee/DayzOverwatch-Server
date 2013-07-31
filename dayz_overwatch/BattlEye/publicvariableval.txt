@@ -41,7 +41,6 @@
 5 "fn_swapVars.sqf"
 5 "processInitCommands"
 5 "promptRName.sqf"
-5 ".sqf\"]" !="init.sqf\"]"
 5 "rpcCodeVarName"
 5 "rpcDirectCall"
 5 "broadcastRpcCallAll"
