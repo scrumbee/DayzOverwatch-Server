@@ -50,6 +50,8 @@ if (_characterID == "0") exitWith {
 private["_debug","_distance"];
 _debug = getMarkerpos "respawn_west";
 _distance = _debug distance _charPos;
+//diag_log ("debug _charPos = " + str(_charPos));
+//diag_log ("debug _distance = " + str(_distance));
 if (_distance < 2000) exitWith { 
 	diag_log format["ERROR: server_playerSync: Cannot Sync Player %1 [%2]. Position in debug! %3",name _character,_characterID,_charPos];
 };
@@ -203,14 +205,18 @@ if (_characterID != "0") then {
 		
 		// If player is in a vehicle, keep its position updated
 		if (vehicle _character != _character) then {
-			[vehicle _character, "position"] call server_updateObject;
+//			[vehicle _character, "position"] call server_updateObject;
+			if (!(vehicle _character in needUpdate_objects)) then {
+				//diag_log format["DEBUG: Added to NeedUpdate=%1",_object];
+				needUpdate_objects set [count needUpdate_objects, vehicle _character];
+			};
 		};
 		
 		// Force gear updates for nearby vehicles/tents
 		_pos = _this select 0;
 		{
 			[_x, "gear"] call server_updateObject;
-		} forEach nearestObjects [_pos, ["Car", "Helicopter", "Motorcycle", "Ship", "TentStorage", "StashSmall","StashMedium"], 10];
+		} forEach nearestObjects [_pos, ["Car", "Helicopter", "Motorcycle", "Ship", "TentStorage"], 10];
 		//[_charPos] call server_updateNearbyObjects;
 
 		//Reset timer

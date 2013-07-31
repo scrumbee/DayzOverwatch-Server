@@ -5,4 +5,4 @@ class CfgPatches {
 		requiredVersion = 0.1;
 		requiredAddons[] = {"dayz_code"};
 	};
-	#include "init\world.hpp"
+};

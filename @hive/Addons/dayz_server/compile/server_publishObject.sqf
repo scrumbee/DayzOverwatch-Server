@@ -5,13 +5,12 @@ _object = 		_this select 1;
 _worldspace = 	_this select 2;
 _class = 		_this select 3;
 
-#include "\z\addons\dayz_server\compile\server_toggle_debug.hpp"
-
 if (!(_object isKindOf "Building")) exitWith {
 	deleteVehicle _object;
 };
 _allowed = [_object, "Server"] call check_publishobject;
 if (!_allowed) exitWith { };
+
 
 //diag_log ("PUBLISH: Attempt " + str(_object));
 
@@ -31,6 +30,4 @@ if (_object isKindOf "TentStorage") then {
 
 dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_object];
 
-#ifdef OBJECT_DEBUG
-diag_log ("PUBLISH: Created " + (_class) + " with ID " + _uid);
-#endif
+//diag_log ("PUBLISH: Created " + (_class) + " with ID " + _uid);
