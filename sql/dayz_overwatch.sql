@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50527
 File Encoding         : 65001
 
-Date: 2013-07-09 05:08:05
+Date: 2013-07-31 20:17:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -106,7 +106,7 @@ CREATE TABLE `instance_vehicle` (
   KEY `fk3_instance_vehicle` (`world_vehicle_id`),
   CONSTRAINT `fk3_instance_vehicle` FOREIGN KEY (`world_vehicle_id`) REFERENCES `world_vehicle` (`id`),
   CONSTRAINT `instance_vehicle_ibfk_1` FOREIGN KEY (`instance_id`) REFERENCES `instance` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1950 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2513 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of instance_vehicle
@@ -147,7 +147,7 @@ CREATE TABLE `log_entry` (
   PRIMARY KEY (`id`),
   KEY `fk1_log_entry` (`log_code_id`),
   CONSTRAINT `fk1_log_entry` FOREIGN KEY (`log_code_id`) REFERENCES `log_code` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39429 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39535 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of log_entry
@@ -244,7 +244,7 @@ CREATE TABLE `profile` (
   `total_headshots` int(5) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uq_profile` (`unique_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2613 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2621 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of profile
@@ -277,7 +277,7 @@ CREATE TABLE `survivor` (
   `DistanceFoot` int(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `idx1_main` (`unique_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10267 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10284 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of survivor
@@ -301,7 +301,7 @@ CREATE TABLE `vehicle` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `uq1_vehicle` (`class_name`),
   KEY `idx1_vehicle` (`class_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=310 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=332 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of vehicle
@@ -405,22 +405,44 @@ INSERT INTO `vehicle` VALUES ('101', 'JetSkiYanahui_Case_Blue', '0.100', '0.700'
 INSERT INTO `vehicle` VALUES ('102', 'JetSkiYanahui_Case_Red', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('103', 'JetSkiYanahui_Yellow', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('104', 'JetSkiYanahui_Green', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
-INSERT INTO `vehicle` VALUES ('105', 'JetSkiYanahui_Blue', '0.100', '0.700', '0.200', '0.800', '2', '4', null, '[]');
-INSERT INTO `vehicle` VALUES ('106', 'JetSkiYanahui_Red', '0.100', '0.400', '0.200', '0.800', '2', '4', null, '[]');
-INSERT INTO `vehicle` VALUES ('107', 'JetSkiYanahui_White', '0.100', '0.400', '0.200', '0.800', '2', '4', null, '[]');
-INSERT INTO `vehicle` VALUES ('108', 'C185_DZ', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
+INSERT INTO `vehicle` VALUES ('105', 'JetSkiYanahui_Blue', '0.000', '0.000', '0.500', '0.800', '2', '4', null, '[]');
+INSERT INTO `vehicle` VALUES ('106', 'JetSkiYanahui_Red_DZ', '0.000', '0.000', '0.500', '0.800', '2', '4', null, '[]');
+INSERT INTO `vehicle` VALUES ('107', 'JetSkiYanahui_Green_DZ', '0.000', '0.000', '0.500', '0.800', '2', '4', null, '[]');
+INSERT INTO `vehicle` VALUES ('108', 'C185_DZ', '0.000', '0.000', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('109', 'C185F_DZ', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('110', 'C185E_DZ', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('300', 'UH1Y_DZ', '0.800', '0.900', '0.100', '0.200', '0', '1', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
-INSERT INTO `vehicle` VALUES ('301', 'HMMWV_M1151_M2_DES_EP1', '0.500', '0.700', '0.200', '0.600', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
-INSERT INTO `vehicle` VALUES ('302', 'BTR40_MG_TK_INS_EP1', '0.500', '0.700', '0.200', '0.600', '0', '2', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
-INSERT INTO `vehicle` VALUES ('303', 'SUV_Armored_DZ', '0.600', '0.700', '0.200', '0.500', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
-INSERT INTO `vehicle` VALUES ('304', 'usec_bell206_1', '0.700', '0.800', '0.200', '0.300', '0', '0', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
+INSERT INTO `vehicle` VALUES ('301', 'HMMWV_M1151_M2_DES_EP1', '0.500', '0.850', '0.200', '0.600', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('302', 'BTR40_MG_TK_INS_EP1', '0.500', '0.850', '0.200', '0.600', '0', '2', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('303', 'SUV_Armored_DZ', '0.600', '0.850', '0.200', '0.500', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('304', 'Moved_to_309', '0.700', '0.850', '0.200', '0.300', '0', '0', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
 INSERT INTO `vehicle` VALUES ('305', 'BAF_Merlin_DZ', '0.700', '0.900', '0.100', '0.200', '0', '1', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
 INSERT INTO `vehicle` VALUES ('306', 'GyroC_DZ', '0.000', '0.000', '0.100', '0.800', '0', '1', null, '[]');
-INSERT INTO `vehicle` VALUES ('307', 'UAZ_MG_TK_EP1', '0.400', '0.700', '0.200', '0.800', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
-INSERT INTO `vehicle` VALUES ('308', 'Pickup_PK_GUE', '0.400', '0.700', '0.200', '0.800', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
-INSERT INTO `vehicle` VALUES ('309', 'UH60M_DZ', '0.500', '0.700', '0.200', '0.800', '0', '1', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
+INSERT INTO `vehicle` VALUES ('307', 'UAZ_MG_TK_EP1', '0.500', '0.850', '0.000', '0.200', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('308', 'Pickup_PK_GUE', '0.500', '0.850', '0.000', '0.200', '0', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('309', 'UH60M_DZ', '0.500', '0.850', '0.000', '0.200', '0', '1', 'motor,elektronika,mala vrtule,velka vrtule', '[]');
+INSERT INTO `vehicle` VALUES ('310', '240GD_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('311', '440cuda_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('312', 'barcuda_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('313', 'cd71hm_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('314', 'challenger_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('315', 'civic_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('316', 'cooter_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('317', 'cuda_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('318', 'fury_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('319', 'hemicuda_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('320', 'monaco_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('321', 'oldtruck_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('322', 'oldtruc2', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('323', 'oltruc3_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('324', 'roadrunner_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('325', 'roadrunner2_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('326', 'rosco_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('327', 'sahco_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('328', 'schoolbus_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('329', 'jailbus_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('330', 'mackr_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('331', null, '0.100', '0.850', '0.200', '0.800', '0', '0', null, '[]');
 
 -- ----------------------------
 -- Table structure for `world`
@@ -467,7 +489,7 @@ CREATE TABLE `world_vehicle` (
   KEY `idx2_world_vehicle` (`world_id`),
   CONSTRAINT `world_vehicle_ibfk_1` FOREIGN KEY (`vehicle_id`) REFERENCES `vehicle` (`id`),
   CONSTRAINT `world_vehicle_ibfk_2` FOREIGN KEY (`world_id`) REFERENCES `world` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2036 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2061 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of world_vehicle
@@ -1208,6 +1230,27 @@ INSERT INTO `world_vehicle` VALUES ('2036', '309', '1', '[54,[6930.72,2340.85,0.
 INSERT INTO `world_vehicle` VALUES ('2037', '309', '1', '[200,[13113.1,10437.3,0.001]]', null, '0.600', null);
 INSERT INTO `world_vehicle` VALUES ('2038', '309', '1', '[171,[2524.9,5065.23,0.001]]', null, '0.600', null);
 INSERT INTO `world_vehicle` VALUES ('2039', '309', '1', '[193,[9703.03,8928.37,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2040', '310', '1', '[139,[11555.6,4986.32,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2041', '311', '1', '[31,[10119.5,3735.09,0.002]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2042', '312', '1', '[261,[6769.7,5604.83,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2043', '313', '1', '[130,[2188.39,6241.32,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2044', '314', '1', '[198,[4917.94,12558.1,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2045', '315', '1', '[345,[7870.34,3453.99,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2046', '316', '1', '[326,[2780.69,3096.04,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2047', '317', '1', '[203,[6192.94,10378.4,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2048', '318', '1', '[266,[7222.51,6961.52,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2049', '319', '1', '[250,[10625.2,2182.69,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2050', '320', '1', '[162,[5685.44,3012.96,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2051', '321', '1', '[350,[4539.21,3149.86,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2052', '322', '1', '[283,[3329.37,3924.26,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2053', '323', '1', '[133,[3604.17,6944.11,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2054', '324', '1', '[189,[7310.31,8722.73,0.002]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2055', '325', '1', '[208,[9662.26,9832.92,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2056', '326', '1', '[279,[12813.2,9648.22,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2057', '327', '1', '[358,[10268.7,9512.91,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2058', '328', '1', '[234,[7022.97,2571.86,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2059', '329', '1', '[99,[10213.9,1608.57,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2060', '330', '1', '[340,[3659.74,2451.18,0.001]]', null, '0.600', null);
 
 -- ----------------------------
 -- View structure for `v_deployable`
