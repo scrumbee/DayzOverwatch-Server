@@ -86,5 +86,3 @@ if (!isDedicated) then {
 	_playerMonitor = [] execVM "\z\addons\dayz_code\system\player_monitor.sqf";
 };
 //#include "\z\addons\dayz_code\system\REsec.sqf"
-[] ExecVM "buildings\main.sqf";
-[] ExecVM "buildings\camp1.sqf";

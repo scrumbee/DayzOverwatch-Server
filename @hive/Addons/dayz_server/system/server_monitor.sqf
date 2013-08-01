@@ -23,6 +23,9 @@ if (_script != "") then
 	};
 };
 
+//Buildings
+call compile preProcessFileLineNumbers "\z\addons\dayz_server\buildings\main.sqf";
+
 	//Stream in objects
 	/* STREAM OBJECTS */
 		//Send the key
