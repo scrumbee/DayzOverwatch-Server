@@ -7,15 +7,17 @@ OnLoadMissionTime = False;
 disabledAI = true;
 disableChannels[]={0,2,6};
 enableItemsDropping = 0;
-onPauseScript = "\z\addons\dayz_code\compile\player_onPause.sqf";
+onPauseScript = "";
+briefing = 0;
+debriefing = 0;
 
-loadScreen = "\z\addons\dayz_code\gui\dayz_logo_ca.paa";
+loadScreen = "\z\addons\dayz_code\gui\ow_blur_ls.paa";
 
 class Header
 {
- gameType = COOP;            //DM, Team, Coop, ...
- minPlayers = 1;             //min # of players the mission supports
- maxPlayers = 100;            //Max # of players the mission supports
+	gameType = COOP;			//DM, Team, Coop, ...
+	minPlayers = 1;				//Min # of players the mission supports
+	maxPlayers = 100;			//Max # of players the mission supports
 };
 
 aiKills = 1;
@@ -37,6 +39,7 @@ class RscText
 	colorBackground[] = {0, 0, 0, 0};
 	linespacing = 1;
 };
+
 class RscPicture
 {
 	access=0;
@@ -50,6 +53,7 @@ class RscPicture
 	lineSpacing=0;
 	text="";
 };
+
 class RscLoadingText : RscText
 {
 	style = 2;
@@ -60,6 +64,7 @@ class RscLoadingText : RscText
 	sizeEx = 0.03921;
 	colorText[] = {0.543,0.5742,0.4102,1.0};
 };
+
 class RscProgress
 {
 	x = 0.344;
@@ -70,6 +75,7 @@ class RscProgress
 	colorFrame[] = {0,0,0,0};
 	colorBar[] = {1,1,1,1};
 };
+
 class RscProgressNotFreeze
 {
 	idc = -1;
@@ -81,6 +87,7 @@ class RscProgressNotFreeze
 	h = 0.039216;
 	texture = "#(argb,8,8,3)color(0,0,0,0)";
 };
+
 //
 // the loading screen itself
 //
@@ -103,17 +110,6 @@ class DayZ_loadingScreen
 			colorText[] = {0,0,0,0};
 			colorBackground[] = {0,0,0,1};
 		};
-		/*
-		class nicePic : RscPicture
-		{
-			style = 48 + 0x800; // ST_PICTURE + ST_KEEP_ASPECT_RATIO
-			x = safezoneX + safezoneW/2 - 0.25;
-			y = safezoneY + safezoneH/2 - 0.2;
-			w = 0.5;
-			h = 0.4;
-			text = "img\nicePic.paa";
-		};
-		*/
 	};
 	class controls
 	{
@@ -146,10 +142,13 @@ class DayZ_loadingScreen
 	};
 };
 
+// logo watermark
 class RscTitles
 {
 titles[] = {"dsow"};
  
+
+
 class dsow {
   idd = -1;
   movingEnable = 0;
@@ -160,6 +159,13 @@ class dsow {
  
   controls[]={"Picture"};
  
+
+
+
+
+
+
+
   class Picture {
     x = "0.00001 * safezoneW + safezoneX";
 	y = "0.00001 * safezoneH + safezoneY";
@@ -173,6 +179,8 @@ class dsow {
     colorBackground[]={0,0,0,0};
     colorText[]={1,1,1,1};
     font="Bitstream";
-  };
+			};
+		};
+	};
 };
-};
+
