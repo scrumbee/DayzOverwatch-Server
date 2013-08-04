@@ -2,6 +2,7 @@
 5 "loadFile"
 5 "call"
 5 "mission"
+//5 "enable"
 5 "spawn"
 5 "format"
 5 "parse"
@@ -33,14 +34,19 @@
 5 "count"
 5 "markerText"
 5 "BIS_fnc"
+//5 "+" //!"e+"
+//5 "\+" //!"e+"
 5 "_bis"
 5 "markerType"
 5 "teamtype"
 5 "composeText"
 5 "teamName"
+5 "execVM"
 5 "fn_swapVars.sqf"
 5 "processInitCommands"
 5 "promptRName.sqf"
+//5 "%"
+//5 ".sqf\"]" !="init.sqf\"]"
 5 "rpcCodeVarName"
 5 "rpcDirectCall"
 5 "broadcastRpcCallAll"
@@ -172,6 +178,8 @@
 5 "set,"
 5 "set "
 5 "exec	"
+//5 "	\nexec"
+//5 "\nexec"
 5 "exec\n"
 5 "exec\n	"
 5 ",exec"
@@ -239,7 +247,13 @@
 5 "preprocess"
 5 "runinitscript"
 5 "createdialog"
-
+//5 "+" !"e+00"
+//5 ";"
+//5 "{"
+//5 "(" !"TELEPORT REVERT"
+//5 "&"
+//5 "%"
+//5 "'"
 5 actionmonitor
 5 bis_
 5 building_spawnloot
@@ -294,7 +308,13 @@
 5 player_zombieattack
 5 player_zombiecheck
 5 r_player_removeactions2
-//5 PVDZ_
+5 PVDZ_
+5 PVAH_
+5 PVAHR_
+5 remExField
+5 remExFP
+5 drn_AskServerDynamicWeatherEventArgs
+5 BIS_effects_gepv
 5 server_
 5 stream_locationcheck
 5 stream_locationdel
@@ -306,3 +326,11 @@
 5 world_sunrise
 5 world_surfacenoise
 5 zombie_
+5 createUnit
+5 createGroup
+5 BattleFieldClearance
+5 HighCommandSubordinate
+5 FirstAidSystem
+5 AlternativeInjurySimulation
+5 FORM
+5 "<NULL - team member>"

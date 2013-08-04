@@ -1,4 +1,4 @@
 // Blacklist of illegal target objects
-1 "" //NOTE: The only legit positions/attatchto distances are [0,0,0] and [0,1,0] anything else is a hack!
+1 "" !"MAV_RQ11RAVEN_STATIC" !"rq11_rotor" !"rq11_paddle" !"rq11_camera" !"rq11_body" !"rq11_tail" !"rq11_wing_m" !"rq11_wing_lr" !"Old_bike_TK_CIV_EP1"
 1 !"MAV_RQ11RAVEN_STATIC" !"rq11_rotor" !"rq11_paddle" !"rq11_camera" !"rq11_body" !"rq11_tail" !"rq11_wing_m" !"rq11_wing_lr" !"Old_bike_TK_CIV_EP1"
 5 Ikarus
