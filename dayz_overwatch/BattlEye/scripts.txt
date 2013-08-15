@@ -1,1 +1,18 @@
 5 setDammage
+5 "compile toString"
+5 @TheWarZ
+5 "beeeh"
+5 "dayz-injector-menu"
+5 Shadowy_NONRE
+5 "lol\car.sqf"
+5 "_cute"
+5 "_stuff"
+5 "_vgmenu"
+5 "_func4"
+5 "_genVar"
+5 "_rand60"
+5 "_first_term"
+5 "_skarmory"
+5 "_salamence"
+5 "Init RE"
+5 "Nigger"
