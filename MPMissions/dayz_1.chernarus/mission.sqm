@@ -13,11 +13,6 @@ class Mission
 		"dayz_vehicles",
 		"cacharacters_pmc",
 		"ca_modules_functions",
-		"cacharacters2",
-		"castructures_nav_pier",
-		"castructures_e_mil",
-		"CABuildings",
-		"camisc3",
 		"gms_k98",
 		"RH_m14",
 		"FHQ_Remington",
@@ -37,18 +32,13 @@ class Mission
 		"MicroAirVehicles",
 		"oz_is_objects",
 		"monaro",
-		"nissan_350z",
-		"ca_communityconfigurationproject_e_editor_madeallbackpacksavailableempty"
+		"gsc_units_stalker_patch",
+		"nissan_350z"
 	};
 	addOnsAuto[]=
 	{
 		"dayz_weapons",
 		"ca_modules_functions",
-		"cacharacters2",
-		"castructures_nav_pier",
-		"castructures_e_mil",
-		"CABuildings",
-		"camisc3",
 		"chernarus",
 		"gms_k98",
 		"RH_m14",
@@ -69,8 +59,8 @@ class Mission
 		"MicroAirVehicles",
 		"oz_is_objects",
 		"monaro",
-		"nissan_350z",
-		"ca_communityconfigurationproject_e_editor_madeallbackpacksavailableempty"
+		"gsc_units_stalker_patch",
+		"nissan_350z"
 	};
 	randomSeed=11171215;
 	class Intel

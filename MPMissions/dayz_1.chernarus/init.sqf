@@ -18,6 +18,8 @@ player setVariable ["BIS_noCoreConversations", true];
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
+//call compile preprocessFileLineNumbers "\z\addons\ow_assets\init\variables1.sqf";
+// variables1-5.sqf Changes amount of weapon’s holder that can spawn in a 200m area where variables5.sqf spawns the lowest amount, adjust to get better performance.
 progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";					//Initilize the publicVariable event handlers
 progressLoadingScreen 0.2;

@@ -11,7 +11,7 @@ onPauseScript = "";
 briefing = 0;
 debriefing = 0;
 
-loadScreen = "\z\addons\dayz_code\gui\ow_blur_ls.paa";
+loadScreen = "\z\addons\ow_assets\screen\dayz_logo_ca.paa";
 
 class Header
 {
@@ -171,7 +171,7 @@ class dsow {
 	y = "0.00001 * safezoneH + safezoneY";
 	w = "1 * safezoneW";
 	h = "1 * safezoneH";
-    text="\z\addons\dayz_code\gui\screen_death_ow.paa";
+    text="\z\addons\ow_assets\screen\screen_death_ow.paa";
     sizeEx = -1;
     type=0;
     idc=-1;
