@@ -466,9 +466,9 @@ if (isServer and isNil "sm_done") then {
 	
 	//Spawn camps
 	// quantity, marker, radius, min distance between 2 camps
-	Server_InfectedCamps = [3, "center", 4500, 2000] call fn_bases;
-	dayzInfectedCamps = Server_InfectedCamps;
-	publicVariable "dayzInfectedCamps";
+	//Server_InfectedCamps = [3, "center", 4500, 2000] call fn_bases;
+	//dayzInfectedCamps = Server_InfectedCamps;
+	//publicVariable "dayzInfectedCamps";
 
 	// antiwallhack
 	call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\fa_antiwallhack.sqf";

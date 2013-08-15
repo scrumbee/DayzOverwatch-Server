@@ -437,6 +437,7 @@ INSERT INTO `vehicle` VALUES ('322', 'Civcarsl_DZ', '0.500', '0.850', '0.000', '
 INSERT INTO `vehicle` VALUES ('323', 'Civcarwh_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
 INSERT INTO `vehicle` VALUES ('324', 'Copcarhw_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
 INSERT INTO `vehicle` VALUES ('325', 'Copcarswat_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
+INSERT INTO `vehicle` VALUES ('326', '350z_cream_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
 
 -- ----------------------------
 -- Table structure for `world`
@@ -1244,7 +1245,7 @@ INSERT INTO `world_vehicle` VALUES ('2056', '310', '1', '[279,[12813.2,9648.22,0
 INSERT INTO `world_vehicle` VALUES ('2057', '311', '1', '[358,[10268.7,9512.91,0.001]]', null, '0.600', null);
 INSERT INTO `world_vehicle` VALUES ('2058', '312', '1', '[234,[7022.97,2571.86,0.001]]', null, '0.600', null);
 INSERT INTO `world_vehicle` VALUES ('2059', '315', '1', '[99,[10213.9,1608.57,0.001]]', null, '0.600', null);
-INSERT INTO `world_vehicle` VALUES ('2060', '316', '1', '[340,[3659.74,2451.18,0.001]]', null, '0.600', null);
+INSERT INTO `world_vehicle` VALUES ('2060', '326', '1', '[340,[3659.74,2451.18,0.001]]', null, '0.600', null);
 
 -- ----------------------------
 -- View structure for `v_deployable`

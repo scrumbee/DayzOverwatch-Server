@@ -25,7 +25,7 @@ while {true} do {
 	//selecting loottable
 	//Random lootables?
 	//if (_crashModel == "Mi8Wreck_DZ") then {_lootTable = ["MilitaryEAST","HeliCrashEAST"] call BIS_fnc_selectRandom;}
-	//else {_lootTable = ["MilitaryWEST","HeliCrashWEST"] call BIS_fnc_selectRandom;};
+	//else {_lootTable = ["HeliCrashWEST","HeliCrashEAST","HeliCrash","HeliCrash_No50s"] call BIS_fnc_selectRandom;};
 
 	//or just helicrash loottable
 	if (_crashModel == "Mi8Wreck_DZ") then {_lootTable = "HeliCrashEAST";}

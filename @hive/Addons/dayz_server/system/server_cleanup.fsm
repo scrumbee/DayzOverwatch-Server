@@ -255,7 +255,7 @@ class FSM
        "" \n
        "//diag_log format [""Pile : %1, Created: %2, Age: %3"", _x,  _created, _age];" \n
        "" \n
-       "	if ( (!_keep) && (_nearby==0) && (_age > 15) ) then {" \n
+       "	if ( (!_keep) && (_nearby==0) && (_age > 60) ) then {" \n
        "		deleteVehicle _x;" \n
        "		_delQty = _delQty + 1;" \n
        "	};" \n
@@ -263,7 +263,7 @@ class FSM
        "} forEach _missionObjs;" \n
        "" \n
        "if (_delQty > 0) then {" \n
-       "	//diag_log (""CLEANUP: DELETED "" + str(_delQty) + "" LOOT BAGS"");" \n
+       "	diag_log (""CLEANUP: DELETED "" + str(_delQty) + "" LOOT BAGS"");" \n
        "};" \n
        ""/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
