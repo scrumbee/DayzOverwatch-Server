@@ -39,8 +39,6 @@ diag_log "HIVE: Starting";
 		};
 		diag_log ("HIVE: Local Time set to " + str(_date));
 	};
-//Buildings
-call compile preProcessFileLineNumbers "\z\addons\dayz_server\buildings\main.sqf";
 
 	//Stream in objects
 	/* STREAM OBJECTS
