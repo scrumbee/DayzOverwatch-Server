@@ -4,16 +4,50 @@ Navicat MySQL Data Transfer
 Source Server         : hive
 Source Server Version : 50613
 Source Host           : localhost:3306
-Source Database       : dayz_overwatch
+Source Database       : dayz_ow_invcust
 
 Target Server Type    : MYSQL
 Target Server Version : 50613
 File Encoding         : 65001
 
-Date: 2013-08-29 12:49:46
+Date: 2013-08-29 12:49:35
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `cust_loadout`
+-- ----------------------------
+DROP TABLE IF EXISTS `cust_loadout`;
+CREATE TABLE `cust_loadout` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `inventory` varchar(2048) NOT NULL,
+  `backpack` varchar(2048) NOT NULL,
+  `model` varchar(100) DEFAULT NULL,
+  `description` varchar(1024) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of cust_loadout
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `cust_loadout_profile`
+-- ----------------------------
+DROP TABLE IF EXISTS `cust_loadout_profile`;
+CREATE TABLE `cust_loadout_profile` (
+  `cust_loadout_id` bigint(20) unsigned NOT NULL,
+  `unique_id` varchar(128) NOT NULL,
+  PRIMARY KEY (`cust_loadout_id`,`unique_id`),
+  KEY `fk2_cust_loadout_profile` (`unique_id`),
+  CONSTRAINT `cust_loadout_profile_ibfk_1` FOREIGN KEY (`cust_loadout_id`) REFERENCES `cust_loadout` (`id`),
+  CONSTRAINT `cust_loadout_profile_ibfk_2` FOREIGN KEY (`unique_id`) REFERENCES `profile` (`unique_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of cust_loadout_profile
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `deployable`
@@ -106,7 +140,7 @@ CREATE TABLE `instance_vehicle` (
   KEY `fk3_instance_vehicle` (`world_vehicle_id`),
   CONSTRAINT `fk3_instance_vehicle` FOREIGN KEY (`world_vehicle_id`) REFERENCES `world_vehicle` (`id`),
   CONSTRAINT `instance_vehicle_ibfk_1` FOREIGN KEY (`instance_id`) REFERENCES `instance` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2990 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2995 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of instance_vehicle
@@ -147,7 +181,7 @@ CREATE TABLE `log_entry` (
   PRIMARY KEY (`id`),
   KEY `fk1_log_entry` (`log_code_id`),
   CONSTRAINT `fk1_log_entry` FOREIGN KEY (`log_code_id`) REFERENCES `log_code` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39770 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39685 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of log_entry
@@ -244,7 +278,7 @@ CREATE TABLE `profile` (
   `total_headshots` int(5) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uq_profile` (`unique_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2633 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2632 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of profile
@@ -277,7 +311,7 @@ CREATE TABLE `survivor` (
   `DistanceFoot` int(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `idx1_main` (`unique_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10390 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10346 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of survivor
@@ -406,8 +440,8 @@ INSERT INTO `vehicle` VALUES ('102', 'JetSkiYanahui_Case_Red', '0.100', '0.700',
 INSERT INTO `vehicle` VALUES ('103', 'JetSkiYanahui_Yellow', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('104', 'JetSkiYanahui_Green', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('105', 'JetSkiYanahui_Blue', '0.000', '0.000', '0.500', '0.800', '2', '4', null, '[]');
-INSERT INTO `vehicle` VALUES ('106', 'JetSkiYanahui_Red_DZ', '0.000', '0.000', '0.500', '0.800', '4', '4', null, '[]');
-INSERT INTO `vehicle` VALUES ('107', 'JetSkiYanahui_Green_DZ', '0.000', '0.000', '0.500', '0.800', '4', '4', null, '[]');
+INSERT INTO `vehicle` VALUES ('106', 'JetSkiYanahui_Red_DZ', '0.000', '0.000', '0.500', '0.800', '2', '4', null, '[]');
+INSERT INTO `vehicle` VALUES ('107', 'JetSkiYanahui_Green_DZ', '0.000', '0.000', '0.500', '0.800', '2', '4', null, '[]');
 INSERT INTO `vehicle` VALUES ('108', 'C185_DZ', '0.000', '0.000', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('109', 'C185F_DZ', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
 INSERT INTO `vehicle` VALUES ('110', 'C185E_DZ', '0.100', '0.700', '0.200', '0.800', '0', '1', null, '[]');
@@ -438,7 +472,7 @@ INSERT INTO `vehicle` VALUES ('323', 'Civcarwh_DZ', '0.500', '0.850', '0.000', '
 INSERT INTO `vehicle` VALUES ('324', 'CPD_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
 INSERT INTO `vehicle` VALUES ('325', 'CPD_U_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
 INSERT INTO `vehicle` VALUES ('326', '350z_cream_DZ', '0.500', '0.850', '0.000', '0.200', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
-INSERT INTO `vehicle` VALUES ('327', 'Camel_DZ', '0.700', '0.900', '0.100', '0.800', '1', '2', null, '[]');
+INSERT INTO `vehicle` VALUES ('327', 'Camel_DZ', '0.100', '0.700', '0.100', '0.800', '1', '2', null, '[]');
 INSERT INTO `vehicle` VALUES ('328', 'HMMWV_M2_DZ', '0.100', '0.700', '0.100', '0.800', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
 INSERT INTO `vehicle` VALUES ('329', 'HMMWV_Armored_DZ', '0.100', '0.700', '0.100', '0.800', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');
 INSERT INTO `vehicle` VALUES ('330', 'MTVR_DZ', '0.100', '0.700', '0.100', '0.800', '1', '1', 'palivo,motor,karoserie,wheel_1_1_steering,wheel_1_2_steering,wheel_2_1_steering,wheel_2_2_steering', '[]');

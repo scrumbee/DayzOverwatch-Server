@@ -1,6 +1,5 @@
-5 !="remExField" !="remExFP" !="drn_AskServerDynamicWeatherEventArgs" !="BIS_effects_gepv" !"PVDZ_" !"PVAH_" !"PVAHR_" !="dayzSetFuel" !="DDOPP_pvSay" !="DDOPP_pvAnim"
+5 !="remExField" !="remExFP" !="drn_AskServerDynamicWeatherEventArgs" !="BIS_effects_gepv" !"PVDZ_" !"PVAHR_" !="PVAH_AdminRequest" !="PVAH_WriteLogRequest" !="dayzSetFuel" !="DDOPP_pvSay" !="DDOPP_pvAnim"
 5 PVDZ_ !=PVDZ_drg_RaDrag !=PVDZ_drg_RaLW !=PVDZ_drg_RLact !=PVDZ_hlt_Bandage !=PVDZ_hlt_Bleed !=PVDZ_hlt_Epi !=PVDZ_hlt_Morphine !=PVDZ_hlt_PainK !=PVDZ_hlt_Transfuse !=PVDZ_obj_Delete !=PVDZ_obj_Fire !=PVDZ_obj_GutBody !=PVDZ_obj_HideBody !=PVDZ_obj_Publish !=PVDZ_obj_RoadFlare !=PVDZ_plr_Death !=PVDZ_plr_Discorem !=PVDZ_plr_Humanity !=PVDZ_plr_Login1 !=PVDZ_plr_Login2 !=PVDZ_plr_LoginRecord !=PVDZ_plr_Save !=PVDZ_sec_atp !=PVDZ_veh_Save !=PVDZ_veh_SetFuel !=PVDZ_veh_SF !=PVDZ_veh_SH
-5 PVAH_ !=PVAH_admin_rq !=PVAH_writelog_rq !=PVAH_filluLog_arr
 5 PVAHR_ !PVAHR_0 !PVAHR_1 !PVAHR_2 !PVAHR_3 !PVAHR_4 !PVAHR_5 !PVAHR_6 !PVAHR_7 !PVAHR_8 !PVAHR_9
 5="player"
 5="server"
@@ -15,3 +14,4 @@
 5="PVDZ_keylog"
 5="PVDZ_AdminMenuCode"
 5="PVDZ_boooox_array"
+5 vilegaming
