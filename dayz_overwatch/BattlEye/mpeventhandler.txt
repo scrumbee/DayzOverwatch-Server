@@ -33,7 +33,7 @@
 5 "task"
 5 "allow" !="this enableSimulation false;this allowDammage false;this disableAI 'FSM';this disableAI 'ANIM';this disableAI 'MOVE';"
 5 "enable" !="this enableSimulation false;this allowDammage false;this disableAI 'FSM';this disableAI 'ANIM';this disableAI 'MOVE';"
-5 "spawn" 
+5 spawn !="_this spawn fnc_plyrHit;"
 5 "for"
 5 "format"
 5 "skip"
