@@ -11,26 +11,30 @@ if (isServer) then {
 			
 			_tmpObjects = [];
 			{
-				_nearby = {isPlayer _x} count (_x nearEntities [["CAManBase"], 500]);
-				_keep = _x getVariable ["permaLoot",false];
-				if ((_nearby == 0) && (!_keep) && !(_x in alldead)) then 
-				{
-					_tmpObjects = _tmpObjects + [_x];
-				};
-				_nearby = {isPlayer _x} count (_x nearEntities [["CAManBase"], 250]);
-				if ((_nearby == 0) && (_x in alldead) && (_x isKindOf "zZombie_Base")) then 
-				{
-					deleteVehicle _x;
+				if !(isNull _x) then {
+					_nearby = {isPlayer _x} count (_x nearEntities [["CAManBase"], 500]);
+					_keep = _x getVariable ["permaLoot",false];
+					if ((_nearby == 0) && (!_keep) && !(_x in alldead)) then 
+					{
+						_tmpObjects = _tmpObjects + [_x];
+					};
+					_nearby = {isPlayer _x} count (_x nearEntities [["CAManBase"], 250]);
+					if ((_nearby == 0) && (_x in alldead) && (_x isKindOf "zZombie_Base")) then 
+					{
+						deleteVehicle _x;
+					};
 				};
 			} foreach _objectsX;
 			sleep 100;
 			
 			{
-				_nearby = {isPlayer _x} count (_x nearEntities [["CAManBase"], 500]);
-				_keep = _x getVariable ["permaLoot",false];
-				if ((_nearby == 0) && (!_keep) && !(_x in alldead)) then 
-				{
-					deleteVehicle _x;
+				if !(isNull _x) then {
+					_nearby = {isPlayer _x} count (_x nearEntities [["CAManBase"], 500]);
+					_keep = _x getVariable ["permaLoot",false];
+					if ((_nearby == 0) && (!_keep) && !(_x in alldead)) then 
+					{
+						deleteVehicle _x;
+					};
 				};
 			} forEach _tmpObjects;
 		};
@@ -225,25 +229,27 @@ if (isServer) then {
 									deleteGroup _myGroupX;
 									_x = nil;
 					} else {
-						_nearby = {isPlayer _x} count (_x nearEntities [AllPlayers, 100]);
-						
-						if (!(_xtypeanimal in _animaltype)) then { _animaltype set [(count _animaltype),(typeOf _x)]; };
+						if !(isNull _x) then {
+							_nearby = {isPlayer _x} count (_x nearEntities [AllPlayers, 100]);
+							
+							if (!(_xtypeanimal in _animaltype)) then { _animaltype set [(count _animaltype),(typeOf _x)]; };
 
-						if (_nearby==0) then {
-							_myGroupX = group _x;
-							_x removeAllMPEventHandlers "mpkilled";
-							_x removeAllMPEventHandlers "mphit";
-							_x removeAllMPEventHandlers "mprespawn";
-							_x removeAllEventHandlers "FiredNear";
-							_x removeAllEventHandlers "HandleDamage";
-							_x removeAllEventHandlers "Killed";
-							_x removeAllEventHandlers "Fired";
-							_x removeAllEventHandlers "GetOut";
-							_x removeAllEventHandlers "Local";
-							clearVehicleInit _x;
-							deleteVehicle _x;
-							deleteGroup _myGroupX;
-							_x = nil;
+							if (_nearby==0) then {
+								_myGroupX = group _x;
+								_x removeAllMPEventHandlers "mpkilled";
+								_x removeAllMPEventHandlers "mphit";
+								_x removeAllMPEventHandlers "mprespawn";
+								_x removeAllEventHandlers "FiredNear";
+								_x removeAllEventHandlers "HandleDamage";
+								_x removeAllEventHandlers "Killed";
+								_x removeAllEventHandlers "Fired";
+								_x removeAllEventHandlers "GetOut";
+								_x removeAllEventHandlers "Local";
+								clearVehicleInit _x;
+								deleteVehicle _x;
+								deleteGroup _myGroupX;
+								_x = nil;
+							};
 						};
 					};
 				} forEach allMissionObjects "Animal";
