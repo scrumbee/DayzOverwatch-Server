@@ -7,8 +7,6 @@
 5=BAF_ied_v3
 5=BAF_ied_v4
 5=BAF_L85A2_RIS_CWS
-5=BAF_LRR_scoped
-5=BAF_LRR_scoped_W
 // 5=Bizon  // referenced in dayzmod code
 //5=G36a
 5=IR_Strobe_Marker
