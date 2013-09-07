@@ -35,7 +35,7 @@ if (isServer) then {
 				_lastNeedUpdate = diag_tickTime;
 				{
 					needUpdate_objects = needUpdate_objects - [_x];
-					[_x,"all"] call server_updateObject;
+					[_x,"all", true] call server_updateObject;
 
 				} forEach needUpdate_objects;
 			};
