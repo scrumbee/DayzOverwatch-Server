@@ -1,43 +1,6 @@
 // Dayz Overwatch cleanup script
 
 if (isServer) then {
-	[] spawn {
-		while {true} do {
-			sleep 200;
-			_objects1 = (allMissionObjects "ReammoBox");
-			_objects2 = (allMissionObjects "Sound_Flies");
-			_objects3 = (allMissionObjects "Land_Fire_DZ");
-			_objectsX = _objects1 + _objects2 + _objects3 + alldead;
-			
-			_tmpObjects = [];
-			{
-				if !(isNull _x) then {
-					_nearby = {isPlayer _x} count (_x nearEntities [["CAManBase"], 400]);
-					_keep = _x getVariable ["permaLoot",false];
-					if ((_nearby == 0) && (!_keep) && !(_x in alldead)) then 
-					{
-						_tmpObjects = _tmpObjects + [_x];
-					};
-					_nearby = {isPlayer _x} count (_x nearEntities [["CAManBase"], 250]);
-					if ((_nearby == 0) && (_x in alldead) && (_x isKindOf "zZombie_Base")) then 
-					{
-						deleteVehicle _x;
-					};
-				};
-			} foreach _objectsX;
-			sleep 100;
-			
-			{
-				if !(isNull _x) then {
-					_nearby = {isPlayer _x} count (_x nearEntities [["CAManBase"], 400]);
-					if ((_nearby == 0)) then 
-					{
-						deleteVehicle _x;
-					};
-				};
-			} forEach _tmpObjects;
-		};
-	};
 	[] spawn
 	{
 		waitUntil {!(isNil "sm_done")};
@@ -50,7 +13,7 @@ if (isServer) then {
 		_lastItemCheck = diag_tickTime;
 
 		while {true} do {
-			if (((diag_tickTime - _lastUpdate) > 300)) then
+			if (((diag_tickTime - _lastUpdate) > 600)) then
 			{
 				_lastUpdate = diag_tickTime;
 				private ["_date","_dateNum","_diff","_result","_outcome"];
@@ -76,7 +39,7 @@ if (isServer) then {
 
 				} forEach needUpdate_objects;
 			};
-			if ((diag_tickTime - _lastDeadCheck) > 60) then {
+			if ((diag_tickTime - _lastDeadCheck) > 800) then {
 				_lastDeadCheck = diag_tickTime;
 				private ["_modeldex","_myGroupX"];
 				
@@ -99,24 +62,8 @@ if (isServer) then {
 					deleteGroup _myGroupX;
 					_x = nil;			
 				} forEach allDead;
-				{
-					_myGroupX = group _x;
-					_x removeAllMPEventHandlers "mpkilled";
-					_x removeAllMPEventHandlers "mphit";
-					_x removeAllMPEventHandlers "mprespawn";
-					_x removeAllEventHandlers "FiredNear";
-					_x removeAllEventHandlers "HandleDamage";
-					_x removeAllEventHandlers "Killed";
-					_x removeAllEventHandlers "Fired";
-					_x removeAllEventHandlers "GetOut";
-					_x removeAllEventHandlers "Local";
-					clearVehicleInit _x;
-					deleteVehicle _x;
-					deleteGroup _myGroupX;
-					_x = nil;
-				} forEach entities "Seagull";
 			};
-			if ((diag_tickTime - _lastZombieCheck) > 180) then {
+			if ((diag_tickTime - _lastZombieCheck) > 360) then {
 				_lastZombieCheck = diag_tickTime;
 				{
 					if (local _x) then {
@@ -150,7 +97,8 @@ if (isServer) then {
 
 				//Disable Zombie Server Side Simulation
 				{
-					if (isPlayer _x) then {
+					if (local _x) then {
+						_x enableSimulation false;
 						_myGroupX = group _x;
 						 _x removeAllMPEventHandlers "mpkilled";
 						_x removeAllMPEventHandlers "mphit";
@@ -164,15 +112,13 @@ if (isServer) then {
 						clearVehicleInit _x;
 						deleteVehicle _x;
 						deleteGroup _myGroupX;
-						 _x = nil;
-					} else {
-						_x enableSimulation false;
+						_x = nil;
 					};
 
 				} forEach entities "zZombie_Base";
 			};
 			
-			if (((diag_tickTime - _lastItemCheck) > 900)) then
+			if (((diag_tickTime - _lastItemCheck) > 450)) then
 			{
 				_lastItemCheck = diag_tickTime;
 				private ["_delQty","_keep","_nearby","_myGroupX","_delQtyAnimalR","_delQtyAnimal","_xtypeanimal","_missionObjs","_qty","_animaltype"];
@@ -181,7 +127,7 @@ if (isServer) then {
 				_missionObjs = allMissionObjects "ReammoBox";
 				_qty = count _missionObjs;
 				{
-					if ((local _x) or (_qty > 500)) then {
+					if ((local _x) or (_qty > 750)) then {
 						_keep = _x getVariable ["permaLoot",false];
 								_nearby = {isPlayer _x} count (_x nearEntities [["CAManBase"], 100]);
 						if ( (!_keep) && (_nearby==0) ) then {
@@ -190,135 +136,6 @@ if (isServer) then {
 						};
 					};
 				} forEach _missionObjs;
-
-				_animaltype = [];
-				{
-					_xtypeanimal = typeof _x;
-					if(_xtypeanimal=="Rabbit") then {
-							  _myGroupX = group _x;
-									_x removeAllMPEventHandlers "mpkilled";
-									_x removeAllMPEventHandlers "mphit";
-									_x removeAllMPEventHandlers "mprespawn";
-									_x removeAllEventHandlers "FiredNear";
-									_x removeAllEventHandlers "HandleDamage";
-									_x removeAllEventHandlers "Killed";
-									_x removeAllEventHandlers "Fired";
-									_x removeAllEventHandlers "GetOut";
-									_x removeAllEventHandlers "Local";
-									clearVehicleInit _x; //let's clear all PICs
-									deleteVehicle _x;
-									deleteGroup _myGroupX;
-									_x = nil;
-					} else {
-						if !(isNull _x) then {
-							_nearby = {isPlayer _x} count (_x nearEntities [AllPlayers, 100]);
-							
-							if (!(_xtypeanimal in _animaltype)) then { _animaltype set [(count _animaltype),(typeOf _x)]; };
-
-							if (_nearby==0) then {
-								_myGroupX = group _x;
-								_x removeAllMPEventHandlers "mpkilled";
-								_x removeAllMPEventHandlers "mphit";
-								_x removeAllMPEventHandlers "mprespawn";
-								_x removeAllEventHandlers "FiredNear";
-								_x removeAllEventHandlers "HandleDamage";
-								_x removeAllEventHandlers "Killed";
-								_x removeAllEventHandlers "Fired";
-								_x removeAllEventHandlers "GetOut";
-								_x removeAllEventHandlers "Local";
-								clearVehicleInit _x;
-								deleteVehicle _x;
-								deleteGroup _myGroupX;
-								_x = nil;
-							};
-						};
-					};
-				} forEach allMissionObjects "Animal";
-			};
-
-			if (( diag_fps < 2) and (diag_tickTime-_lastFPSCleanup > 450)) then
-			{
-				_lastFPSCleanup = diag_tickTime;
-				private ["_myGroupX","_missionObjs"];
-				//Clean All Dead
-				{
-					_myGroupX = group _x;
-					_x removeAllMPEventHandlers "mpkilled";
-					_x removeAllMPEventHandlers "mphit";
-					_x removeAllMPEventHandlers "mprespawn";
-					_x removeAllEventHandlers "FiredNear";
-					_x removeAllEventHandlers "HandleDamage";
-					_x removeAllEventHandlers "Killed";
-					_x removeAllEventHandlers "Fired";
-					_x removeAllEventHandlers "GetOut";
-					_x removeAllEventHandlers "Local";
-					clearVehicleInit _x;
-					deleteVehicle _x;
-					deleteGroup _myGroupX;
-					_x = nil;
-					_myGroupX = nil;
-				} forEach allDead;
-
-				//Clean Up All Flies Sounds
-				{
-					deleteVehicle _x;
-					_x = nil;
-				} forEach allMissionObjects "Sound_Flies";
-
-				//Clean All Local Zombies
-				{
-					if (local _x) then {
-						_myGroupX = group _x;
-						_x removeAllMPEventHandlers "mpkilled";
-						_x removeAllMPEventHandlers "mphit";
-						_x removeAllMPEventHandlers "mprespawn";
-						_x removeAllEventHandlers "FiredNear";
-						_x removeAllEventHandlers "HandleDamage";
-						_x removeAllEventHandlers "Killed";
-						_x removeAllEventHandlers "Fired";
-						_x removeAllEventHandlers "GetOut";
-						_x removeAllEventHandlers "Local";
-						clearVehicleInit _x;
-						deleteVehicle _x;
-						deleteGroup _myGroupX;
-						_x = nil;
-						_myGroupX = nil;
-					};
-				} forEach entities "zZombie_Base";
-
-				//Clean All Animals
-				{
-					if (local _x) then {
-						_myGroupX = group _x;
-						_x removeAllMPEventHandlers "mpkilled";
-						_x removeAllMPEventHandlers "mphit";
-						_x removeAllMPEventHandlers "mprespawn";
-						_x removeAllEventHandlers "FiredNear";
-						_x removeAllEventHandlers "HandleDamage";
-						_x removeAllEventHandlers "Killed";
-						_x removeAllEventHandlers "Fired";
-						_x removeAllEventHandlers "GetOut";
-						_x removeAllEventHandlers "Local";
-						clearVehicleInit _x;
-						deleteVehicle _x;
-						deleteGroup _myGroupX;
-						_x = nil;
-						_myGroupX = nil;
-					};
-				} forEach allMissionObjects "Animal";
-
-				_missionObjs = allMissionObjects "ReammoBox";
-				{
-					deleteVehicle _x;
-					_x = nil;
-				} forEach _missionObjs;
-
-				//Update Objects
-				{
-					needUpdate_objects = needUpdate_objects - [_x];
-					[_x,"all"] call server_updateObject;
-
-				} forEach needUpdate_objects;
 			};
 
 			//Player Groups Cleanup
@@ -328,6 +145,23 @@ if (isServer) then {
 					_x = nil;
 				};
 			} forEach allGroups;
+			
+			{
+				_myGroupX = group _x;
+				_x removeAllMPEventHandlers "mpkilled";
+				_x removeAllMPEventHandlers "mphit";
+				_x removeAllMPEventHandlers "mprespawn";
+				_x removeAllEventHandlers "FiredNear";
+				_x removeAllEventHandlers "HandleDamage";
+				_x removeAllEventHandlers "Killed";
+				_x removeAllEventHandlers "Fired";
+				_x removeAllEventHandlers "GetOut";
+				_x removeAllEventHandlers "Local";
+				clearVehicleInit _x;
+				deleteVehicle _x;
+				deleteGroup _myGroupX;
+				_x = nil;
+			} forEach entities "Seagull";
 			sleep 5;
 		};
 	};
