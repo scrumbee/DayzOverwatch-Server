@@ -145,42 +145,31 @@ class DayZ_loadingScreen
 // logo watermark
 class RscTitles
 {
-titles[] = {"dsow"};
- 
+	titles[] = {"dsow"};
 
+	class dsow {
+	  idd = -1;
+	  movingEnable = 0;
+	  duration = 10;
+	  fadein = 2;
+	  fadeout = 2;
+	  name="dsow";
+	 
+	  controls[]={"Picture"};
 
-class dsow {
-  idd = -1;
-  movingEnable = 0;
-  duration = 10;
-  fadein = 2;
-  fadeout = 2;
-  name="dsow";
- 
-  controls[]={"Picture"};
- 
-
-
-
-
-
-
-
-  class Picture {
-    x = "0.00001 * safezoneW + safezoneX";
-	y = "0.00001 * safezoneH + safezoneY";
-	w = "1 * safezoneW";
-	h = "1 * safezoneH";
-    text="\z\addons\ow_assets\screen\screen_death_ow.paa";
-    sizeEx = -1;
-    type=0;
-    idc=-1;
-    style=48;
-    colorBackground[]={0,0,0,0};
-    colorText[]={1,1,1,1};
-    font="Bitstream";
-			};
+		class Picture {
+			x = "0.00001 * safezoneW + safezoneX";
+			y = "0.00001 * safezoneH + safezoneY";
+			w = "1 * safezoneW";
+			h = "1 * safezoneH";
+			text="\z\addons\ow_assets\screen\screen_death_ow.paa";
+			sizeEx = -1;
+			type=0;
+			idc=-1;
+			style=48;
+			colorBackground[]={0,0,0,0};
+			colorText[]={1,1,1,1};
+			font="Bitstream";
 		};
 	};
 };
-
