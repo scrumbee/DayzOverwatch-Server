@@ -11,7 +11,7 @@ if (isServer) then {
 		_lastDeadCheck = diag_tickTime;
 		_lastFPSCleanup = diag_tickTime;
 		_lastItemCheck = diag_tickTime;
-		_allDead = [] //temp array used for marking age of dead bodies
+		_allDead = []; //temp array used for marking age of dead bodies
 
 		while {true} do {
 			if (((diag_tickTime - _lastUpdate) > 600)) then
