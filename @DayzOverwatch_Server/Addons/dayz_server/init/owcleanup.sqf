@@ -63,7 +63,7 @@ if (isServer) then {
 					deleteGroup _myGroupX;
 					_x = nil;			
 				} forEach _allDead;
-				_allDead = allDead;
+				_allDead = [] + allDead;
 			};
 			if ((diag_tickTime - _lastZombieCheck) > 360) then {
 				_lastZombieCheck = diag_tickTime;
