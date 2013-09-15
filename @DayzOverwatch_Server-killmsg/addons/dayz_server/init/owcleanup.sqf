@@ -11,6 +11,7 @@ if (isServer) then {
 		_lastDeadCheck = diag_tickTime;
 		_lastFPSCleanup = diag_tickTime;
 		_lastItemCheck = diag_tickTime;
+		_allDead = [] //temp array used for marking age of dead bodies
 
 		while {true} do {
 			if (((diag_tickTime - _lastUpdate) > 600)) then
@@ -61,7 +62,8 @@ if (isServer) then {
 					deleteVehicle _x;
 					deleteGroup _myGroupX;
 					_x = nil;			
-				} forEach allDead;
+				} forEach _allDead;
+				_allDead = [] + allDead;
 			};
 			if ((diag_tickTime - _lastZombieCheck) > 360) then {
 				_lastZombieCheck = diag_tickTime;
