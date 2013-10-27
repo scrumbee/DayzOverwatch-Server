@@ -1,50 +1,74 @@
 /*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, DayZ Server Cleanup">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"init",0,250,-75.000000,-400.000000,25.000000,-350.000000,0.000000,"init"};
-item1[] = {"true",8,218,-75.000000,-175.000000,25.000000,-125.000000,0.000000,"true"};
-item2[] = {"waiting",2,250,-75.000000,-100.000000,25.000000,-50.000000,0.000000,"waiting"};
-item3[] = {"too_many_dead",4,218,-150.000000,-25.000000,-50.000000,25.000000,3.000000,"too many" \n "dead"};
-item4[] = {"cleanup_dead",2,250,-175.000000,50.000000,-75.000000,100.000000,0.000000,"cleanup" \n "dead"};
-item5[] = {"too_many_objects",4,218,-25.000000,-25.000000,75.000000,25.000000,2.000000,"too many" \n "objects"};
-item6[] = {"cleanup_objects",2,250,25.000000,50.000000,125.000000,100.000000,0.000000,"cleanup" \n "objects"};
-item7[] = {"time_sync",4,218,-200.000000,-50.000000,-100.000000,0.000000,0.000000,"time" \n "sync"};
-item8[] = {"sync_the_time",2,250,-275.000000,50.000000,-175.000000,100.000000,0.000000,"sync" \n "the time"};
-item9[] = {"true",8,218,-75.000000,100.000000,25.000000,150.000000,0.000000,"true"};
-item10[] = {"general_cleanup",2,250,-75.000000,200.000000,25.000000,250.000000,0.000000,"general" \n "cleanup"};
-item11[] = {"",7,210,-304.000000,220.999985,-296.000000,229.000015,0.000000,""};
-item12[] = {"",7,210,-304.000000,-154.000000,-296.000000,-146.000000,0.000000,""};
-item13[] = {"",7,210,308.500000,-79.000000,316.500000,-71.000000,0.000000,""};
-item14[] = {"",7,210,308.500000,121.000008,316.500031,129.000000,0.000000,""};
-item15[] = {"initialized",4,218,-75.000000,-325.000000,25.000000,-275.000000,0.000000,"initialized"};
-item16[] = {"prepare",2,4346,-75.000000,-250.000000,25.000000,-200.000000,0.000000,"prepare"};
-item17[] = {"update_objects",2,250,125.000000,50.000000,225.000000,100.000000,0.000000,"update objects"};
-item18[] = {"need_update",4,218,25.000000,-50.000000,125.000000,0.000000,1.000000,"need update"};
-link0[] = {0,15};
+item0[] = {"init",0,250,-75.000000,-425.000000,25.000000,-375.000000,0.000000,"init"};
+item1[] = {"true",8,218,-75.000000,-200.000000,25.000000,-150.000000,0.000000,"true"};
+item2[] = {"waiting",2,250,-75.000000,-125.000000,25.000000,-75.000000,0.000000,"waiting"};
+item3[] = {"too_many_dead",4,218,-125.000000,0.000000,-25.000000,50.000000,2.000000,"too many" \n "dead"};
+item4[] = {"cleanup_dead",2,250,-125.000000,75.000000,-25.000000,125.000000,0.000000,"cleanup" \n "dead"};
+item5[] = {"too_many_objects",4,218,-25.000000,0.000000,75.000000,50.000000,2.000000,"too many" \n "objects"};
+item6[] = {"cleanup_objects",2,4346,-25.000000,75.000000,75.000000,125.000000,0.000000,"cleanup" \n "objects"};
+item7[] = {"time_sync",4,218,-225.000000,0.000000,-125.000000,50.000000,1.000000,"time" \n "sync"};
+item8[] = {"sync_the_time",2,250,-225.000000,175.000000,-125.000000,225.000000,0.000000,"sync" \n "the time"};
+item9[] = {"true",8,218,-75.000000,250.000000,25.000000,300.000000,0.000000,"true"};
+item10[] = {"general_cleanup",2,250,-75.000000,350.000000,25.000000,400.000000,0.000000,"general" \n "cleanup"};
+item11[] = {"",7,210,-304.000000,371.000000,-296.000000,379.000031,0.000000,""};
+item12[] = {"",7,210,-304.000000,-179.000000,-296.000000,-171.000000,0.000000,""};
+item13[] = {"initialized",4,218,-75.000000,-350.000000,25.000000,-300.000000,0.000000,"initialized"};
+item14[] = {"prepare",2,250,-75.000000,-275.000000,25.000000,-225.000000,0.000000,"prepare"};
+item15[] = {"update_objects",2,250,75.000000,175.000000,175.000000,225.000000,0.000000,"update objects"};
+item16[] = {"Objects_need_upd",4,218,75.000000,0.000000,175.000000,50.000000,1.000000,"Objects" \n "need update"};
+item17[] = {"timeout",4,218,250.000000,-225.000000,350.000000,-175.000000,0.000000,"timeout"};
+item18[] = {"",7,210,246.000000,271.000000,254.000000,279.000000,0.000000,""};
+item19[] = {"",7,210,-29.000000,-41.500000,-21.000000,-33.499996,0.000000,""};
+item20[] = {"",7,210,20.999998,-41.500000,29.000000,-33.500000,0.000000,""};
+item21[] = {"",7,210,121.000000,-41.500000,129.000000,-33.500000,0.000000,""};
+item22[] = {"",7,210,-79.000000,-41.500000,-71.000000,-33.500000,0.000000,""};
+item23[] = {"",7,210,-179.000000,-41.500000,-171.000000,-33.500000,0.000000,""};
+item24[] = {"",7,210,-79.000000,146.000000,-71.000000,154.000000,0.000000,""};
+item25[] = {"",7,210,21.000000,146.000000,28.999998,154.000000,0.000000,""};
+item26[] = {"",7,210,-29.000000,146.000000,-20.999998,154.000000,0.000000,""};
+item27[] = {"",7,210,246.000000,-104.000000,254.000000,-96.000000,0.000000,""};
+item28[] = {"",7,210,121.000000,271.000000,129.000000,279.000000,0.000000,""};
+item29[] = {"",7,210,-179.000000,271.000000,-171.000000,279.000000,0.000000,""};
+item30[] = {"____FAKE____",9,1200,0.000000,0.000000,0.000000,0.000000,0.000000,"____FAKE____"};
+link0[] = {0,13};
 link1[] = {1,2};
-link2[] = {2,3};
-link3[] = {2,5};
-link4[] = {2,7};
-link5[] = {2,13};
-link6[] = {2,18};
-link7[] = {3,4};
-link8[] = {4,9};
-link9[] = {5,6};
-link10[] = {6,9};
-link11[] = {7,8};
-link12[] = {8,9};
-link13[] = {9,10};
-link14[] = {10,11};
-link15[] = {11,12};
-link16[] = {12,1};
-link17[] = {13,14};
-link18[] = {14,9};
-link19[] = {15,16};
-link20[] = {16,1};
-link21[] = {17,9};
-link22[] = {18,17};
-globals[] = {25.000000,1,0,0,0,640,480,1,27,6316128,1,-396.580658,354.272186,240.490540,-413.513184,690,601,1};
-window[] = {2,-1,-1,-32000,-32000,802,22,1351,22,3,707};
+link2[] = {2,19};
+link3[] = {2,27};
+link4[] = {3,4};
+link5[] = {4,24};
+link6[] = {5,6};
+link7[] = {6,25};
+link8[] = {7,8};
+link9[] = {8,29};
+link10[] = {9,10};
+link11[] = {10,11};
+link12[] = {11,12};
+link13[] = {12,1};
+link14[] = {13,14};
+link15[] = {14,1};
+link16[] = {15,28};
+link17[] = {16,15};
+link18[] = {18,28};
+link19[] = {19,20};
+link20[] = {19,22};
+link21[] = {20,5};
+link22[] = {20,21};
+link23[] = {21,16};
+link24[] = {22,3};
+link25[] = {22,23};
+link26[] = {23,7};
+link27[] = {24,26};
+link28[] = {25,26};
+link29[] = {26,9};
+link30[] = {27,18};
+link31[] = {28,9};
+link32[] = {29,9};
+link33[] = {17,30};
+link34[] = {30,17};
+globals[] = {25.000000,1,0,0,0,640,480,1,45,6316128,1,-334.464142,416.388702,422.218689,-231.785019,690,601,1};
+window[] = {2,-1,-1,-32000,-32000,846,66,1395,66,3,707};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -85,7 +109,7 @@ class FSM
         /*%FSM<LINK "too_many_dead">*/
         class too_many_dead
         {
-          priority = 3.000000;
+          priority = 2.000000;
           to="cleanup_dead";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"(_numDead > 300)"/*%FSM</CONDITION""">*/;
@@ -102,13 +126,23 @@ class FSM
           action=/*%FSM<ACTION""">*/"_timeNem = diag_tickTime;"/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
-        /*%FSM<LINK "need_update">*/
-        class need_update
+        /*%FSM<LINK "time_sync">*/
+        class time_sync
+        {
+          priority = 1.000000;
+          to="sync_the_time";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _lastUpdate) > 300)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_lastUpdate = diag_tickTime;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Objects_need_upd">*/
+        class Objects_need_upd
         {
           priority = 1.000000;
           to="update_objects";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"( (count needUpdate_objects) > 0 && (diag_tickTime -_lastNeedUpdate>40) )"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"( (count needUpdate_objects) > 0 && (diag_tickTime -_lastNeedUpdate> 5)  && (sm_done))"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/"_lastNeedUpdate = diag_tickTime;"/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -122,16 +156,6 @@ class FSM
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
-        /*%FSM<LINK "time_sync">*/
-        class time_sync
-        {
-          priority = 0.000000;
-          to="sync_the_time";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _lastUpdate) > 300)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_lastUpdate = diag_tickTime;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
       };
     };
     /*%FSM</STATE>*/
@@ -139,81 +163,84 @@ class FSM
     class cleanup_dead
     {
       name = "cleanup_dead";
-      init = /*%FSM<STATEINIT""">*/"diag_log (""CLEANUP: TOO MANY DEAD BODIES"");" \n
+      init = /*%FSM<STATEINIT""">*/"diag_log (""CLEANUP: PERFORMING BODY CLEANUP"");" \n
        "" \n
-       "diag_log (""CLEANUP: PERFORMING BODY CLEANUP ON "" + str(_numDead) + "" BODIES"");" \n
-       "" \n
+       "_delQtyP = 0;" \n
        "_delQtyZ = 0;" \n
-       "_numZombie = {_x isKindOf ""zZombie_Base""} count allDead;" \n
+       "_delQtyFL = 0;" \n
+       "_delQtyFL1 = 0;" \n
+       "_delQtyFP = 0;" \n
+       "" \n
        "{" \n
        "	if (local _x) then {" \n
        "		if (_x isKindOf ""zZombie_Base"") then {" \n
-       "			deleteVehicle _x;" \n
-       "			_delQtyZ = _delQtyZ + 1;" \n
-       "		} else {" \n
-       "			_exists = _x in _deadBodies;" \n
-       "			if(!_exists) then {" \n
-       "				_deadBodies set [count _deadBodies,_x];" \n
+       "				deleteVehicle _x;" \n
+       "				_delQtyZ = _delQtyZ + 1;" \n
+       "		};" \n
+       "" \n
+       "		if (_x isKindOf ""CAManBase"") then {" \n
+       "			_deathTime = _x getVariable [""processedDeath"", diag_tickTime];" \n
+       "			if (diag_tickTime - _deathTime > 1200) then {" \n
+       "				/*" \n
+       "				_flies = nearestObject [_x, ""Sound_Flies""];" \n
+       "				if (!isNull _flies) then {" \n
+       "					deleteVehicle _flies;" \n
+       "					_delQtyFL = _delQtyFL + 1;" \n
+       "				}; */" \n
+       "				deleteVehicle _x;" \n
+       "				_delQtyP = _delQtyP + 1;" \n
        "			};" \n
        "		};" \n
+       "		if (_x isKindOf ""Seagull"") then {" \n
+       "				_myGroupX = group _x;" \n
+       "				_x removeAllMPEventHandlers ""mpkilled"";" \n
+       "				_x removeAllMPEventHandlers ""mphit"";" \n
+       "				_x removeAllMPEventHandlers ""mprespawn"";" \n
+       "				_x removeAllEventHandlers ""FiredNear"";" \n
+       "				_x removeAllEventHandlers ""HandleDamage"";" \n
+       "				_x removeAllEventHandlers ""Killed"";" \n
+       "				_x removeAllEventHandlers ""Fired"";" \n
+       "				_x removeAllEventHandlers ""GetOut"";" \n
+       "				_x removeAllEventHandlers ""Local"";" \n
+       "				clearVehicleInit _x;" \n
+       "				deleteVehicle _x;" \n
+       "				deleteGroup _myGroupX;" \n
+       "				_x = nil;" \n
+       "		};" \n
+       "				_myGroupX = group _x;" \n
+       "				_x removeAllMPEventHandlers ""mpkilled"";" \n
+       "				_x removeAllMPEventHandlers ""mphit"";" \n
+       "				_x removeAllMPEventHandlers ""mprespawn"";" \n
+       "				_x removeAllEventHandlers ""FiredNear"";" \n
+       "				_x removeAllEventHandlers ""HandleDamage"";" \n
+       "				_x removeAllEventHandlers ""Killed"";" \n
+       "				_x removeAllEventHandlers ""Fired"";" \n
+       "				_x removeAllEventHandlers ""GetOut"";" \n
+       "				_x removeAllEventHandlers ""Local"";" \n
+       "				clearVehicleInit _x;" \n
+       "				deleteVehicle _x;" \n
+       "				deleteGroup _myGroupX;" \n
+       "				_x = nil;	" \n
        "	};" \n
        "} forEach allDead;" \n
        "" \n
-       "//Cleanup players" \n
-       "_body = objNull;" \n
-       "_delQtyP = 0;" \n
-       "_delDo = _numDead - _numZombie;" \n
-       "_delDo = ((_delDo min (count _deadBodies)) -1);" \n
-       "if (_delDo<1) then {_delDo=1};" \n
-       "for ""_i"" from 0 to _delDo do {" \n
-       "	_body = _deadBodies select _i;" \n
-       "	if(!isNil ""_body"") then {" \n
-       "		_pos = getPosATL _body;" \n
-       "		_sfx = nearestObject [_pos,""Sound_Flies""];" \n
-       "		if (!(isNull _sfx)) then {" \n
-       "			deleteVehicle _sfx;" \n
-       "		};" \n
-       "		deleteVehicle _body;" \n
-       "		_delQtyP = _delQtyP + 1;" \n
-       "	};" \n
-       "	_deadBodies set [_i,""DEL""];" \n
-       "" \n
-       "//Let's move this into the body removal sequence so uncontrolled flies are removed only if corpses are cleaned" \n
-       "//Check Flies" \n
-       "_isOK=-1;" \n
-       "_dwUSOFC=0;" \n
        "{" \n
-       "	//_isOk = {!alive _x} count (nearestObjects [_x, [""CAManBase""], 2]);" \n
-       "	_isOk = {!alive _x} count (_x nearEntities [[""CAManBase""], 2]);" \n
-       "	if (_isOk>-1) then {" \n
-       "		diag_log (""DW_DEBUG _isOK: "" + str(_isOK) );" \n
-       "	};" \n
-       "	if ((_isOk>-1) AND (_isOK<1)) then {" \n
-       "		//diag_log (""CLEANUP: DELETING A SOUND OF FLIES"");" \n
-       "_dwUSOFC=_dwUSOFC+1;" \n
+       "    if ({!alive _x} count (nearestObjects [_x, [""CAManBase""], 10]) >= 0) then {" \n
        "		deleteVehicle _x;" \n
-       "		diag_log (""CLEANUP: DELETED AN UNCONTROLLED SOUND OF FLIES:"" + str(_dwUSOFC) );" \n
-       "	};" \n
+       "		_delQtyFL1 = _delQtyFL1 + 1;" \n
+       "    };" \n
        "} forEach allMissionObjects ""Sound_Flies"";" \n
        "" \n
-       "" \n
-       "//Let's move this into the body removal sequence so uncontrolled fireplaces are removed only if corpses are cleaned" \n
-       "//clean fireplaces" \n
-       "_dwUFPC=0;" \n
        "{" \n
        "	if (local _x) then {" \n
-       "		//diag_log (""CLEANUP: DELETING A UNCONTROLLED FIREPLACE"");" \n
        "		deleteVehicle _x;" \n
-       "_dwUFPC=_dwUFPC+1;" \n
-       "		diag_log (""CLEANUP: DELETED AN UNCONTROLLED FIREPLACE:"" + str(_dwUFPC) );" \n
+       "		_delQtyFP = _delQtyFP + 1;" \n
        "	};" \n
        "} forEach allMissionObjects ""Land_Fire_DZ"";" \n
        "" \n
-       "};" \n
-       "_deadBodies = _deadBodies - [""DEL""];" \n
+       "diag_log (format[""CLEANUP: Deleted %1 players, %2 zombies, %3/%5 flies and %4 fireplaces."",_delQtyP,_delQtyZ,_delQtyFL,_delQtyFP,_delQtyFL1]);" \n
        "" \n
-       "diag_log (""CLEANUP: DELETED "" + str(_delQtyP) + "" PLAYER BODIES AND "" + str(_delQtyZ) + "" BODIES"");" \n
-       ""/*%FSM</STATEINIT""">*/;
+       "//diag_log (""CLEANUP: Deleted "" + str(_delQtyP) + "" players, "" + str(_delQtyZ) + "" zombies, "" + str(_delQtyFL) + "" flies, and "" + str(_delQtyFP) +  "" fireplaces"");"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -234,28 +261,23 @@ class FSM
     class cleanup_objects
     {
       name = "cleanup_objects";
-      init = /*%FSM<STATEINIT""">*/"//_missionObjs = allMissionObjects ""WeaponHolder"" + allMissionObjects ""WeaponHolderBase"" ;" \n
-       "_missionObjs = allMissionObjects ""ReammoBox"";" \n
+      init = /*%FSM<STATEINIT""">*/"_missionObjs =  allMissionObjects ""ReammoBox"";" \n
        "_qty = count _missionObjs;" \n
        "" \n
        "diag_log (""CLEANUP:TOTAL "" + str(_qty) + "" LOOT BAGS"");" \n
        "" \n
+       "_dateNow = (DateToNumber date);" \n
        "_delQty = 0;" \n
        "{" \n
-       "	_keep = _x getVariable [""permaLoot"",false];" \n
-       "	 _nearby = {isPlayer _x} count (_x nearEntities [[""CAManBase""], 250]);" \n
-       "" \n
        "	_created = (_x getVariable [""created"",-0.1]);" \n
-       "" \n
        "	if (_created == -0.1) then {" \n
-       "		_x setVariable [""created"",(DateToNumber date)];" \n
+       "		_x setVariable [""created"",_dateNow,false];" \n
+       "		_created = _dateNow;" \n
        "	};" \n
-       "" \n
-       "	_age = ((DateToNumber date) - _created) * 525948;" \n
-       "" \n
-       "//diag_log format [""Pile : %1, Created: %2, Age: %3"", _x,  _created, _age];" \n
-       "" \n
-       "	if ( (!_keep) && (_nearby==0) && (_age > 60) ) then {" \n
+       "	_keep = _x getVariable [""permaLoot"",false];" \n
+       "	_age = (_dateNow - _created) * 525948;" \n
+       "	_nearby = {(isPlayer _x) and (alive _x)} count (_x nearEntities [[""CAManBase"",""AllVehicles""], 130]);" \n
+       "	if ( (!_keep) && (_nearby==0) && (_age > 20)) then {" \n
        "		deleteVehicle _x;" \n
        "		_delQty = _delQty + 1;" \n
        "	};" \n
@@ -301,12 +323,12 @@ class FSM
        "	_minute = _date select 4;" \n
        "" \n
        "	//Force full moon nights" \n
-       "	_date = [2012,6,6,_hour,_minute];" \n
+       "	_date1 = [2012,6,6,14,_minute];" \n
        "" \n
-       "	setDate _date;" \n
-       "	dayzSetDate = _date;" \n
+       "	setDate _date1;" \n
+       "	dayzSetDate = _date1;" \n
        "	publicVariable ""dayzSetDate"";" \n
-       "	diag_log (""TIME SYNC: Local Time set to "" + str(_date));" \n
+       "	diag_log (""TIME SYNC: Local Time set to "" + str(_date1));" \n
        "};" \n
        ""/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
@@ -338,16 +360,6 @@ class FSM
        "	};" \n
        "} forEach allGroups;" \n
        "" \n
-       "/*" \n
-       "//Check for Ammobox" \n
-       " {" \n
-       "	if(!(_x isKindOf ""WeaponHolder"")) then {" \n
-       "		diag_log (""CLEANUP: DELETING AN AMMOBOX "" + (typeOf _x));" \n
-       "		deleteVehicle _x;" \n
-       "	};" \n
-       " } forEach allMissionObjects ""ReammoBox"";" \n
-       "*/" \n
-       "" \n
        "//Check for hackers" \n
        " {" \n
        "  	if(vehicle _x != _x && !(vehicle _x in _safety) && (typeOf vehicle _x) != ""ParachuteWest"") then {" \n
@@ -356,26 +368,6 @@ class FSM
        "   		_x setDamage 1;" \n
        "	 };" \n
        " } forEach allUnits;" \n
-       "" \n
-       "/*" \n
-       "//Let's move this into the body removal sequence so uncontrolled flies are removed only if corpses are cleaned" \n
-       "//Check Flies" \n
-       "_isOK=-1;" \n
-       "_dwUSOFC=0;" \n
-       "{" \n
-       "	//_isOk = {!alive _x} count (nearestObjects [_x, [""CAManBase""], 2]);" \n
-       "	_isOk = {!alive _x} count (_x nearEntities [[""CAManBase""], 2]);" \n
-       "	if (_isOk>-1) then {" \n
-       "		diag_log (""DW_DEBUG _isOK: "" + str(_isOK) );" \n
-       "	};" \n
-       "	if ((_isOk>-1) AND (isOK<1)) then {" \n
-       "		//diag_log (""CLEANUP: DELETING A SOUND OF FLIES"");" \n
-       "_dwUSOFC=_dwUSOFC+1;" \n
-       "		deleteVehicle _x;" \n
-       "		diag_log (""CLEANUP: DELETED AN UNCONTROLLED SOUND OF FLIES:"" + str(_dwUSOFC) );" \n
-       "	};" \n
-       "} forEach allMissionObjects ""Sound_Flies"";" \n
-       "*/" \n
        "" \n
        "dayz_serverObjectMonitor = _safety;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
@@ -407,7 +399,9 @@ class FSM
        "_timeNem =diag_tickTime;" \n
        "_deadBodies = [];" \n
        "_lastNeedUpdate = diag_tickTime;" \n
+       "_timeout = diag_tickTime;" \n
        "_maxBodies = 15;" \n
+       "sm_done = false;" \n
        ""/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
@@ -448,6 +442,27 @@ class FSM
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "____FAKE____">*/
+    class ____FAKE____
+    {
+      name = "____FAKE____";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "timeout">*/
+        class timeout
+        {
+          priority = 0.000000;
+          to="____FAKE____";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _timeout) > 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_timeout = diag_tickTime;"/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
       };

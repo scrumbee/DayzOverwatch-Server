@@ -40,7 +40,7 @@ if (isServer) then {
 
 				} forEach needUpdate_objects;
 			};
-			if ((diag_tickTime - _lastDeadCheck) > 1500) then {
+			if ((diag_tickTime - _lastDeadCheck) > 1800) then {
 				_lastDeadCheck = diag_tickTime;
 				private ["_modeldex","_myGroupX"];
 				

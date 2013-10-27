@@ -57,7 +57,7 @@ if (_distance < 2000) exitWith {
 //Check for server initiated updates
 _isNewMed =		_character getVariable["medForceUpdate",false];		//Med Update is forced when a player receives some kind of med incident
 _isNewPos =		_character getVariable["posForceUpdate",false];		//Med Update is forced when a player receives some kind of med incident
-_isNewGear =	(count _magazines) > 0;
+_isNewGear =	if (!isNil "_magazines") then { true } else { false };
 
 //diag_log ("Starting Save... MED: " + str(_isNewMed) + " / POS: " + str(_isNewPos)); sleep 0.05;
 
@@ -100,8 +100,7 @@ if (_characterID != "0") then {
 	};
 	if (_isNewGear) then {
 		//diag_log ("gear..."); sleep 0.05;
-		_playerGear = [weapons _character,_magazines];
-//diag_log ("playerGear: " +str(_playerGear));
+		_playerGear = [weapons _character, _magazines select 0, _magazines select 1];
 		_backpack = unitBackpack _character;
 		_playerBackp = [typeOf _backpack,getWeaponCargo _backpack,getMagazineCargo _backpack];
 	};

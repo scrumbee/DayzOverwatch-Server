@@ -1,4 +1,4 @@
-private["_botActive","_int","_newModel","_doLoop","_wait","_hiveVer","_isHiveOk","_playerID","_playerObj","_randomSpot","_publishTo","_primary","_secondary","_key","_result","_charID","_playerObj","_playerName","_finished","_spawnPos","_spawnDir","_items","_counter","_magazines","_weapons","_group","_backpack","_worldspace","_direction","_newUnit","_score","_position","_isNew","_inventory","_backpack","_medical","_survival","_stats","_state"];
+private ["_botActive","_doLoop","_hiveVer","_isHiveOk","_playerID","_playerObj","_randomSpot","_primary","_key","_charID","_playerName","_items","_magazines","_weapons","_backpack","_worldspace","_direction","_newUnit","_isNew","_inventory","_survival","_state","_model","_config","_mags","_wpns","_bcpk","_medicalStats","_tent","_newPlayer"];
 //Set Variables
 
 #include "\z\addons\dayz_server\compile\server_toggle_debug.hpp"
@@ -131,6 +131,8 @@ if (_hiveVer >= dayz_hiveVersionNo) then {
 
 //Server publishes variable to clients and WAITS
 //_playerObj setVariable ["publish",[_charID,_inventory,_backpack,_survival,_isNew,dayz_versionNo,_model,_isHiveOk,_newPlayer],true];
+([4654,9595,0] nearestObject 145259) setDamage 1;
+([4654,9595,0] nearestObject 145260) setDamage 1;
 
-dayzPlayerLogin = [_charID,_inventory,_backpack,_survival,_isNew,dayz_versionNo,_model,_isHiveOk,_newPlayer];
-(owner _playerObj) publicVariableClient "dayzPlayerLogin";
+PVCDZ_plr_Login = [_charID,_inventory,_backpack,_survival,_isNew,dayz_versionNo,_model,_isHiveOk,_newPlayer];
+(owner _playerObj) publicVariableClient "PVCDZ_plr_Login";

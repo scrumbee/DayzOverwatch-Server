@@ -3,7 +3,7 @@
         Please request permission to use/alter/distribute from project leader (R4Z0R49) AND the author (facoptere@gmail.com)
 */
 
-private ["_antiwallhack","_houseType","_houseList","_tmp","_patchList","_house","_o", "_nbhouses", "_nbpatchs"];
+private ["_antiwallhack","_houseType","_houseList","_tmp","_patchList","_house","_o","_nbhouses","_nbpatchs","_pos"];
 
 _antiwallhack=[
 	[
@@ -12,7 +12,7 @@ _antiwallhack=[
 			[6414.05,2760.21,0], [6817.3,2702.03,0], [10517.9,2287.55,0], [11956.7,9120.21,0] // optional precomputed building positions
 		],
 		[
-			[17.6182,-1.8418,3.23178,"Land_CncBlock_D",0],[15.7192,-1.84277,3.22177,"Land_CncBlock_D",0],[-17.4,-0.38,-4.35,"Land_CncBlock_D",90],[-17.4,2.25,-4.35,"Land_CncBlock_D",90],[-17.4,4.22,-4.35,"Land_CncBlock_D",90],[-17.42,-3.55,-7.63,"Land_CncBlock_D",90]  // what to add on building (coordinates/type/angle)
+			[17.6182,-1.8418,3.23178,"Land_CncBlock_D",0],[15.7192,-1.84277,3.22177,"Land_CncBlock_D",0],[-17.4,-0.38,-4.25,"Land_CncBlock_D",90],[-17.4,2.25,-4.25,"Land_CncBlock_D",90],[-17.4,4.22,-4.25,"Land_CncBlock_D",90],[-17.42,-3.55,-7.63,"Land_CncBlock_D",90],[-13.27,2.83,-4.25,"Fort_RazorWire",180],[-13.23,4.28,-4.25,"Fort_RazorWire",180],[-16.81,1.38,-4.25,"Hedgehog",85],[-16.82,-0.6,-4.25,"Hedgehog",90],[-7.45,4.26,-4.25,"Fort_RazorWire",180]  // what to add on building (coordinates/type/angle)
 		]
 	],
 	[
@@ -21,7 +21,7 @@ _antiwallhack=[
 			[6855.66,2496.78,0]
 		],
 		[
-			[-9.66602,7.66602,18.3236,"Fort_RazorWire",0], [-1.30273,7.66602,18.3236,"Fort_RazorWire",0], [-9.66602,0.814453,18.3236,"Fort_RazorWire",0], [-1.30273,0.814453,18.3236,"Fort_RazorWire",0], [-15.0029,4.18359,18.3236,"Fort_RazorWire",90], [3.62109,3.95117,18.3236,"Fort_RazorWire",270]
+			[-9.66602,7.66602,18.3236,"Fort_RazorWire",0], [-1.30273,7.66602,18.3236,"Fort_RazorWire",0], [-9.66602,0.814453,18.3236,"Fort_RazorWire",0], [-1.30273,0.814453,18.3236,"Fort_RazorWire",0], [-15.0029,4.18359,18.3236,"Fort_RazorWire",90], [3.62109,3.95117,18.3236,"Fort_RazorWire",270], [-7.42,8.15,-20.57,"Fort_RazorWire",180], [-4.67,9.92,-21.55,"Fort_RazorWire",180]
 		]
 	],
 	[
@@ -44,9 +44,18 @@ _antiwallhack=[
 		[
 			[1.50049,2.14844,-3.6926,"Land_CncBlock_D",180], [2.86523,0.0966797,-3.69263,"Land_CncBlock_D",270], [1.38232,-2.17578,-3.69305,"Land_CncBlock_D",0]
 		]
+	],
+	[
+		"Land_Barn_Metal", 
+		[[2860.45,9746.05,0.682495],[4565.07,4528.81,0.199997], [6339.55,7693.31,0.0499878],[11329.8,6646.15,0.331261]], 
+		[	
+			[7.02,17.13,-5.74,"Misc_TyreHeap",36], [-5.4,7.85,-5.44,"SKODAWreck",181], [-7.5,8.87,-5.44,"SKODAWreck",181], [-0.99,-9.31,-5.44,"UralWreck",320],
+			[8.33,8.43,-5.44,"datsun01Wreck",176], [4.13,10.16,-5.44,"SKODAWreck",176], [-7.21,-15.37,-5.44,"SKODAWreck",8], [3.3,15.19,-5.44,"UralWreck",210], 
+			[-5.76,12.87,-5.44,"SKODAWreck",150], [6.76,-6.86,-5.54,"LADAWreck",85], [-0.42,-21.9,-5.75,"Misc_TyreHeap",95]
+		]
 	]
 ];
- 
+
 
 _nbhouses = 0;
 _nbpatchs = 0;
@@ -71,7 +80,8 @@ _nbpatchs = 0;
 			_pos = +(_x);
 			_pos resize 3;
 			_pos = _house modelToWorld _pos;
-			_o = (_x select 3) createVehicle _pos;
+			_o = createVehicle [(_x select 3), _pos, [], 0, "CAN_COLLIDE"];
+
 			_o setDir ((getDir _house)+(_x select 4));
 			_o setPosATL _pos;
 			_nbpatchs = _nbpatchs +1;
@@ -81,4 +91,7 @@ _nbpatchs = 0;
 } forEach _antiwallhack;
 
 diag_log(format["%1: %2 buildings patched with %3 objects", __FILE__, _nbhouses, _nbpatchs]);
+
+
+
 

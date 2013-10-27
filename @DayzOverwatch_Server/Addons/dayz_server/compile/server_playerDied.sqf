@@ -9,16 +9,8 @@ _newObject = 	_this select 2;
 _playerID = 	_this select 3;
 _playerName = 	name _newObject;
 
-//dayz_disco = dayz_disco - [_playerID];
-_newObject setVariable["processedDeath",time];
+_newObject setVariable["processedDeath",diag_tickTime];
 _newObject setVariable ["bodyName", _playerName, true];
-
-/*
-diag_log ("DW_DEBUG: (isnil _characterID): " + str(isnil "_characterID"));
-if (isnil "_characterID") then {
-diag_log ("DW_DEBUG: _newObject: " + str(_newObject));	
-	};
-*/
 
 if (typeName _minutes == "STRING") then 
 {
@@ -44,15 +36,4 @@ format ["Player UID#%3 CID#%4 %1 as %5 died at %2",
 ];
 #endif
 
-/*
-_eh = [_newObject] spawn {
-	_body = _this select 0;
-	_method = _body getVariable["deathType","unknown"];
-	_name = _body getVariable["bodyName","unknown"];
-	waitUntil{!isPlayer _body;sleep 1};
-	_body setVariable["deathType",_method,true];
-	_body setVariable["bodyName",_name,true];
-	diag_log ("PDEATH: Player Left Body " + _name);
-};
-*/
 //dead_bodyCleanup set [count dead_bodyCleanup,_newObject];
