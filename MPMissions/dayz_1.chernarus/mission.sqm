@@ -70,7 +70,7 @@ class Mission
 	class Intel
 	{
 		briefingName="DayZ Overwatch";
-		briefingDescription="DayZ Overwatch";
+		briefingDescription="DayZ Overwatch 0.2.5";
 		startWeather=0.067362607;
 		forecastWeather=0.52341133;
 		year=2008;
@@ -1392,47 +1392,53 @@ class Mission
 	};
 	class Markers
 	{
-		items=7;
+		items=8;
 		class Item0
 		{
-			position[]={7839.6055,381.33774,8414.7324};
+			position[]={7839,0,8414};
 			name="center";
 			type="Empty";
 		};
 		class Item1
 		{
-			position[]={-18697.58,379.53012,25815.256};
+			position[]={-18697,0,25815};
 			name="respawn_west";
 			type="Empty";
 		};
 		class Item2
 		{
-			position[]={4932.3345,0.39950246,1989.1094};
-			name="spawn0";
+			position[]={4932,0,1989};
+			name="spawn0"; //spawn_balota
 			type="Empty";
 		};
 		class Item3
 		{
-			position[]={2236.0391,0.63119155,1923.3735};
-			name="spawn1";
+			position[]={2236,0,1923};
+			name="spawn1"; //spawn_kamenka
 			type="Empty";
 		};
 		class Item4
 		{
-			position[]={8738.1328,0.45720705,2122.1082};
-			name="spawn2";
+			position[]={8738,0,2122};
+			name="spawn2"; //spawn_cherno
 			type="Empty";
 		};
 		class Item5
 		{
-			position[]={10909.267,0.57597214,2422.3096};
-			name="spawn3";
+			position[]={10909,0,2422};
+			name="spawn3"; //spawn_elektro
 			type="Empty";
 		};
 		class Item6
 		{
-			position[]={13510.764,0.44504455,5249.3027};
-			name="spawn4";
+			position[]={13510,0,5249};
+			name="spawn4"; //spawn_sol
+			type="Empty";
+		};
+		class Item7
+		{
+			position[]={12048,0,8352};
+			name="spawn5"; //spawn_berezino
 			type="Empty";
 		};
 	};
