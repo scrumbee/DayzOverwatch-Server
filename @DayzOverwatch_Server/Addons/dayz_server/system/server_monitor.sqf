@@ -295,9 +295,9 @@ if (isServer and isNil "sm_done") then {
 		endLoadingScreen;
 	};
 
-	if (isDedicated) then {
-		_id = [] execFSM "\z\addons\dayz_server\system\server_cleanup.fsm";
-	};
+	//if (isDedicated) then {
+		//_id = [] execFSM "\z\addons\dayz_server\system\server_cleanup.fsm";
+	//};
 
 	allowConnection = true;
 
