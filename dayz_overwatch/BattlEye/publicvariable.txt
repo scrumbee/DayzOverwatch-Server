@@ -1,5 +1,4 @@
-5 !="remExField" !="remExFP" !="drn_AskServerDynamicWeatherEventArgs" !="BIS_effects_gepv" !"PVDZ_" !"PVAHR_" !="PVAH_AdminRequest" !="PVAH_WriteLogRequest" !="dayzSetFuel" !="DDOPP_pvSay" !="DDOPP_pvAnim"
-5 PVDZ_ !=PVDZ_drg_RaDrag !=PVDZ_drg_RaLW !=PVDZ_drg_RLact !=PVDZ_hlt_Bandage !=PVDZ_hlt_Bleed !=PVDZ_hlt_Epi !=PVDZ_hlt_Morphine !=PVDZ_hlt_PainK !=PVDZ_hlt_Transfuse !=PVDZ_obj_Delete !=PVDZ_obj_Fire !=PVDZ_obj_GutBody !=PVDZ_obj_HideBody !=PVDZ_obj_Publish !=PVDZ_obj_RoadFlare !=PVDZ_plr_Death !=PVDZ_plr_Discorem !=PVDZ_plr_Humanity !=PVDZ_plr_Login1 !=PVDZ_plr_Login2 !=PVDZ_plr_LoginRecord !=PVDZ_plr_Save !=PVDZ_sec_atp !=PVDZ_veh_Save !=PVDZ_veh_SetFuel !=PVDZ_veh_SF !=PVDZ_veh_SH
+5 !="BIS_effects_gepv" !="PVDZ_sec_atp" !="PVDZ_veh_Save" !="PVCDZ_obj_GutBody" !="PVDZ_obj_Publish" !="PVDZ_objgather_Knockdown" !="PVDZ_objgather_Delete" !="PVDZ_plr_Save" !="PVDZ_send" !="dayzSetFuel" !="PVDZ_obj_Delete" !="PVDZ_obj_Fire" !="PVDZ_hlt_Bleed" !="PVDZ_Server_changeOwner" !="PVDZ_Server_Simulation" !="PVDZ_plr_Death" !="PVDZ_obj_RoadFlare" !="PVDZ_getTickTime" !="PVDZ_veh_SF" !="PVDZ_drg_RaLW" !="PVDZ_drg_RLact" !="PVCDZ_obj_HideBody" !="PVCDZ_veh_SetFuel" !="dayzInfectedCamps" !="PVDZ_plr_Login1" !="PVDZ_plr_Login2" !="PVDZ_plr_LoginRecord" !="PVDZ_serverStoreVar" !="PVDZ_receiveVar" !="PVCDZ_SetVar" !="dayzSetDate" !="PVDZ_drg_RaDrag" !="PVDZ_obj_Fire" !="PVCDZ_hlt_Morphine" !="PVCDZ_hlt_Bandage" !="PVCDZ_hlt_Epi" !="PVCDZ_hlt_Transfuse" !="PVCDZ_hlt_PainK" !="PVCDZ_hlt_AntiB" !="PVCDZ_plr_Humanity" !="PVCDZ_plr_Legs" !="PVCDZ_setServerTickTimeOffset" !="drn_DynamicWeather_DebugTextEventArgs" !="drn_AskServerDynamicWeatherEventArgs" !="drn_DynamicWeatherEventArgs" !="drn_var_DynamicWeather_Rain" !="drn_var_DynamicWeather_ServerInitialized" !="DDOPP_pvSay" !="DDOPP_pvAnim" !="remExFP" !="remExField" !"player" !"PVAHR_" !="PVAH_AdminRequest" !="PVAH_WriteLogRequest"
 5 PVAHR_ !PVAHR_0 !PVAHR_1 !PVAHR_2 !PVAHR_3 !PVAHR_4 !PVAHR_5 !PVAHR_6 !PVAHR_7 !PVAHR_8 !PVAHR_9
 5="player"
 5="server"
@@ -14,4 +13,20 @@
 5="PVDZ_keylog"
 5="PVDZ_AdminMenuCode"
 5="PVDZ_boooox_array"
+5 HangenderRE
 5 vilegaming
+5 v.i.l.e
+5 Lystic
+5 Rustler
+5 BIS_MPF_logic
+5 BIS_MPF_dummygroup
+5 BattleFieldClearance
+5 "HangenderRE"
+5 "vilegaming"
+5 "v.i.l.e"
+5 "Lystic"
+5 "Rustler"
+5 "BIS_MPF_logic"
+5 "BIS_MPF_dummygroup"
+5 "BattleFieldClearance"
+5 "remExFP" !="\"remExFP\" = [,,\"per\",\"execVM\",\"ca\Modules\Functions\init.sqf\"]"
