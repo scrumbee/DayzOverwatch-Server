@@ -36,14 +36,14 @@ INSERT INTO `deployable` VALUES ('6', 'StashSmall');
 INSERT INTO `deployable` VALUES ('1', 'TentStorage');
 INSERT INTO `deployable` VALUES ('2', 'TrapBear');
 INSERT INTO `deployable` VALUES ('3', 'Wire_cat1');
-INSERT INTO `deployable` VALUES ('8', 'DomeTentStorage')
-INSERT INTO `deployable` VALUES ('9', 'CamoNet_DZ')
-INSERT INTO `deployable` VALUES ('10', 'Trap_Cans')
-INSERT INTO `deployable` VALUES ('11', 'TrapTripwireFlare')
-INSERT INTO `deployable` VALUES ('12', 'TrapBearTrapSmoke')
-INSERT INTO `deployable` VALUES ('13', 'TrapTripwireGrenade')
-INSERT INTO `deployable` VALUES ('14', 'TrapTripwireSmoke')
-INSERT INTO `deployable` VALUES ('16', 'TrapBearTrapFlare')
+INSERT INTO `deployable` VALUES ('8', 'DomeTentStorage');
+INSERT INTO `deployable` VALUES ('9', 'CamoNet_DZ');
+INSERT INTO `deployable` VALUES ('10', 'Trap_Cans');
+INSERT INTO `deployable` VALUES ('11', 'TrapTripwireFlare');
+INSERT INTO `deployable` VALUES ('12', 'TrapBearTrapSmoke');
+INSERT INTO `deployable` VALUES ('13', 'TrapTripwireGrenade');
+INSERT INTO `deployable` VALUES ('14', 'TrapTripwireSmoke');
+INSERT INTO `deployable` VALUES ('16', 'TrapBearTrapFlare');
 
 -- ----------------------------
 -- Table structure for `instance`
